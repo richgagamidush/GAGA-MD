@@ -1,5 +1,5 @@
 {
-  "name":"ZOMBIE-MD",
+  "name":"GAGA-MD",
   "description":"Best whatsapp bot developed by Zombie and Gaga ",
   "keywords":["bot","node","baileys","whatsapp"],
   "logo":"https://files.catbox.moe/c8dlrq.jpg",
@@ -47,14 +47,14 @@
     "BOT_NAME" : {
        
       "description":"put A name for your bot",
-      "value":"ZOMBIE-MD",
+      "value":"GAGA-MD",
       "required":false
 
     } ,
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://files.catbox.moe/k7wq3r.jpg",
+      "value":"https://files.catbox.moe/86lc16.jpg",
       "required":false
        
      },
@@ -93,7 +93,7 @@
     
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
-    "value": "254112291443"
+    "value": "254112291443,254729269118"
   },
     "WARN_COUNT":
   {
