@@ -67,7 +67,7 @@ const date = moment().format('DD/MM/YYYY');
   let infoMsg =  `
 
 ╔═━━━━════───➳
-┃ ━━✫*XGAGA* ✫━━
+┃ ━━✫*XGAGA*✫━━
 ┃ ¶Mode : ${mode}
 ┃ ¶User : ${s.OWNER_NAME}
 ┃ ¶Library : Baileys
@@ -78,7 +78,7 @@ const date = moment().format('DD/MM/YYYY');
 ┃ ¶Ramm : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 ┃ ¶Host : ${os.platform()}
 ┃ ✫━━━━═════━━━━✫
-╚══━━━════───➳\n\n`;
+╚══━━━════───\n\n`;
 
 
     
@@ -95,17 +95,17 @@ let menuMsg = `
 
     for (const cat in coms) {
 
-        menuMsg += `╭─━━═━➳ _*${cat}*`;
+        menuMsg += `🛑_*${cat}*`;
 
         for (const cmd of coms[cat]) {
             
             menuMsg += `
-┃¶ ${cmd}`;
+┃🔘┃ ${cmd}`;
 
         }
 
         menuMsg += `
-╰─━━━━══════━━━━✫\n`
+            \n`
 
     }
 
