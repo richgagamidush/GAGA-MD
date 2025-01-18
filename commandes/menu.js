@@ -85,7 +85,8 @@ const date = moment().format('DD/MM/YYYY');
 
 let menuMsg = `
 ┏━━━━══════━━━┓
-┃¶XGAGA BOT 👺
+┃🎇 *QUOTE* 🎆
+"${randomQuote}"
 ┗━━━━═══════━━┛\n
 
 
