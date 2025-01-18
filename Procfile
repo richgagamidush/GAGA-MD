@@ -1,1 +1,1 @@
-worker: node xgaga.js
+worker: node.js
