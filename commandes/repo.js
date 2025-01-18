@@ -34,25 +34,24 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-      *ANYWAY MD IMPORTANT INFO* 
-❒───────────────────❒
-*GITHUB LINK*
-> https://github.com/anywaytech2/ANYWAY-MD-V1
-
-*WHATSAPP CHANNEL*
-> https://whatsapp.com/channel/0029VagWQ255q08VTCRQKP09
-⁠
-╭───────────────────❒
-│❒⁠⁠⁠⁠ *RAM* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│❒⁠⁠⁠⁠ *DEV1* : *Mr anyway*
-│❒⁠⁠⁠⁠ *DEV2* : *Baraka Bega*
-⁠⁠⁠⁠╰───────────────────❒
+╔═━━━━════───💢
+┃ ━✫xɢᴀɢᴀ ʙᴏᴛ sᴄʀɪᴘᴛ✫━
+┃ BOT NAME: GAGA MD
+┃ User : ${s.OWNER_NAME}
+┃ ¶Channel : https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F
+┃ ¶script  : ${s.PREFIXE}
+┃ ¶Date : ${date}
+┃ ¶Time : ${temps}
+┃ ¶Group : https://chat.whatsapp.com/EcbqrI0Me6H0oHtcGB8SxU
+┃ ¶Ramm : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+┃ ¶Reposity : 
+┃ ✫━━━━═════━━━━✫
+╚══━━━════───➳🏎️🏎️🏎️🏎️🏎️🏎️🏎️🏎️
   `;
     
 let menuMsg = `
-     *𝘼𝙉𝙔𝙒𝘼𝙔 𝙏𝙀𝘾𝙃*
-
-❒────────────────────❒`;
+> © Richard Gaga
+`;
 
    var lien = mybotpic();
 
