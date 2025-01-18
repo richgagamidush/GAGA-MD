@@ -1,0 +1,6 @@
+build:
+  docker:
+      worker: Procfile
+run:
+   worker: node xgaga.js
+   
