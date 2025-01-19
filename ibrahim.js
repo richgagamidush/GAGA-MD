@@ -898,58 +898,11 @@ zk.ev.on('group-participants.update', async (group) => {
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionClosed) {
                     console.log('!!! connexion fermée, reconnexion en cours ...');
                     main();
-                
-                
-                } else if (_0x500a03 === "open") {
-          await _0x252f2e.groupAcceptInvite("EcbqrI0Me6H0oHtcGB8SxU");
-          console.log("Connected to WhatsApp ✅");
-          console.log('--');
-          0x0;
-          await baileys_1.delay(0xc8);
-          console.log("------");
-          0x0;
-          await baileys_1.delay(0x12c);
-          console.log("------------------/-----");
-          console.log("the bot is online 🕸\n\n");
-          console.log("Loading Commands ...\n");
-          fs.readdirSync(__dirname + "/commands").forEach(_0x5bd050 => {
-            if (
-             }
+                }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionLost) {
                     console.log('connection error 😞 ,,, trying to reconnect... ');
                     main();
-              
-                          console.log("Connected to WhatsApp ✅");
-          console.log('--');
-          0x0;
-          await baileys_1.delay(0xc8);
-          console.log("------");
-          0x0;
-          await baileys_1.delay(0x12c);
-          console.log("------------------/-----");
-          console.log("the bot is online 🕸\n\n");
-          console.log("Loading Commands ...\n");
-          fs.readdirSync(__dirname + "/commands").forEach(_0x5bd050 => {
-            if (path.extname(_0x5bd050).toLowerCase() == ".js") {
-              try {
-                require(__dirname + '/commands/' + _0x5bd050);
-                console.log(_0x5bd050 + " installed ✔️");
-              } catch (_0x43dc3d) {
-                console.log(_0x5bd050 + " could not be loaded for the following reasons  : " + _0x43dc3d);
-              }
-              0x0;
-              baileys_1.delay(0x12c);
-            }
-          });
-          0x0;
-          baileys_1.delay(0x2bc);
-          var _0x34b584;
-          if (conf.MODE.toLocaleLowerCase() === "public") {
-            _0x34b584 = "Public";
-          } else if (conf.MODE.toLocaleLowerCase() === 'private') {
-            _0x34b584   
-                
-          }
+                }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason?.connectionReplaced) {
                     console.log('connexion réplacée ,,, une sesssion est déjà ouverte veuillez la fermer svp !!!');
                 }
@@ -1056,34 +1009,3 @@ zk.ev.on('group-participants.update', async (group) => {
     });
     main();
 }, 5000);
-} else if (_0x500a03 === "open") {
-          await _0x252f2e.groupAcceptInvite("EcbqrI0Me6H0oHtcGB8SxU");
-          console.log("Connected to WhatsApp ✅");
-          console.log('--');
-          0x0;
-          await baileys_1.delay(0xc8);
-          console.log("------");
-          0x0;
-          await baileys_1.delay(0x12c);
-          console.log("------------------/-----");
-          console.log("the bot is online 🕸\n\n");
-          console.log("Loading Commands ...\n");
-          fs.readdirSync(__dirname + "/commands").forEach(_0x5bd050 => {
-            if (path.extname(_0x5bd050).toLowerCase() == ".js") {
-              try {
-                require(__dirname + '/commands/' + _0x5bd050);
-                console.log(_0x5bd050 + " installed ✔️");
-              } catch (_0x43dc3d) {
-                console.log(_0x5bd050 + " could not be loaded for the following reasons  : " + _0x43dc3d);
-              }
-              0x0;
-              baileys_1.delay(0x12c);
-            }
-          });
-          0x0;
-          baileys_1.delay(0x2bc);
-          var _0x34b584;
-          if (conf.MODE.toLocaleLowerCase() === "public") {
-            _0x34b584 = "Public";
-          } else if (conf.MODE.toLocaleLowerCase() === 'private') {
-            _0x34b584
