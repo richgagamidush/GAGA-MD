@@ -1,24 +1,28 @@
+
+
+
+
 {
-  "name": "GAGA-MD",
+  "name": "Bmw-md",
   "version": "2.0.0",
   "description": "",
-  "main": "xgaga.js", 
+  "main": "ibrahim.js",
   "scripts": {
-    "test": "node xgaga.js",
-    "s": "node xgaga.js",
-    "GAGA-MD": "pm2 start xgaga.js --attach",
-    "GAGA-MD": "pm2 start xgaga.js --attach",
+    "test": "node ibrahim.js",
+    "s": "node ibrahim.js",
+    "toshtech": "pm2 start ibrahim.js --attach",
+    "toshtech": "pm2 start ibrahim.js --attach",
     "c": "tsc"
   },
   "keywords": [
     "bot",
     "Baileys",
-    "Gaga-md",
+    "Bmw-md",
     "whatsapp",
     "whatsapp-bot",
     "bmw-md-boy"
   ],
-  "author": "Gaga",
+  "author": "Tosh205",
 "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
