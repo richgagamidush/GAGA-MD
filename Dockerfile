@@ -9,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/richgagamidush/GAGA-MD.git /root/zokou_BOt
-WORKDIR /root/zokou_Bot/
+RUN git clone https://github.com/richgagamidush/GAGA-MD.git /root/gaga_BOt
+WORKDIR /root/gaga_Bot/
 
 
 COPY package.json .
@@ -21,4 +21,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "index.js"]
+CMD ["npm","run","xgaga.js"]
