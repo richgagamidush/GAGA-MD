@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "s": "node index.js", 
     "keith": "pm2 start index.js --attach --max-memory-restart 490M",
-    "alpha": "pm2 start xgaga.js --attach",
+    "alpha": "pm2 start gaga.js --attach",
     "c": "tsc"
     },
   "keywords": [
