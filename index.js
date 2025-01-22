@@ -316,7 +316,7 @@ zk.ev.on("messages.upsert", async m => {
       const senderNumber = sender.split('@')[0];
 
       // Update the auto-reply message dynamically
-      auto_reply_message = `Hello @${senderNumber}, A brief departure is on the horizon, but I shall return posthaste. Please bear with me for a fleeting moment, and I’ll rejoin you shortly \n\n*powered by Gaga Md*.`;
+      auto_reply_message = `Hello @${senderNumber}, A brief departure is on the horizon \n\n*powered by Gaga Md*.`;
 
       // Check if the message exists and is a command to set a new auto-reply message with any prefix
       if (messageText.match(/^[^\w\s]/) && ms.key.fromMe) {
@@ -350,7 +350,7 @@ function createNotification(deletedMessage) {
   const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
   let notification = `*😈ALPHA ANTIDELETE👿*\n\n`;
   notification += `*Time deleted🥀:* ${new Date().toLocaleString()}\n`;
-  notification += `*Deleted by🌷:* @${deletedBy.split('@')[0]}\n\n*Powered by Keithkeizzah*\n\n`;
+  notification += `*Deleted by🌷:* @${deletedBy.split('@')[0]}\n\n> Regards to richgagamidush\n\n`;
   return notification;
 }
 
@@ -1177,7 +1177,7 @@ if (conf.ANTILINK === "yes") {
 
       //execution des commandes   
       if (verifCom) {
-        const cd = evt.cm.find(keith => keith.nomCom === com || keith.nomCom === com || keith.aliases && keith.aliases.includes(com));
+        const cd = evt.cm.find(zokou => zokou.nomCom === com || zokou.nomCom === com || keith.aliases && keith.aliases.includes(com));
         if (cd) {
           try {
             if (conf.MODE.toLocaleLowerCase() != 'yes' && !superUser) {
