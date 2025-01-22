@@ -1,6 +1,6 @@
 
  {
-  "name": "ALPHA-MD",
+  "name": "GAGA-MD",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -9,18 +9,18 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "s": "node index.js", 
     "keith": "pm2 start index.js --attach --max-memory-restart 490M",
-    "alpha": "pm2 start alpha.js --attach",
+    "alpha": "pm2 start xgaga.js --attach",
     "c": "tsc"
     },
   "keywords": [
     "bot",
     "Baileys",
-    "Alpha-Md",
+    "Gaga-Md",
     "whatsapp",
     "whatsapp-bot",
-    "keithkeizzah"
+    "Midumbagaga"
    ],
-  "author": "keithkeizzah",
+  "author": "Midumbgaga",
 "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
