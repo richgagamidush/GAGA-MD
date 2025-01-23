@@ -1,0 +1,122 @@
+{
+  "name":"CJ-MD",
+  "description":"a Whatsapp bot modified by CJ to make your Whatsapp more interesting",
+  "keywords":["bot","node","baileys","whatsapp"],
+  "logo":"https://raw.githubusercontent.com/CJMZEE/CJ-MD/main/CJ.jpg",
+  "repository":"https://github.com/CJMZEE/CJ-MD",
+  "succes_url":"/",
+  "stack":"container",
+  "env":{
+    "PREFIX":
+    {
+      "description":"choose your prefix of bot",
+      "value":".",
+      "required":true
+    },
+    "AUTO_READ_STATUS":
+    {
+      "description":"Your contact status will be read automatically(Options:yes or no)",
+      "value":"yes",
+      "required":false
+    }, "AUTO_DOWNLOAD_STATUS":
+    {
+      "description":"Your contact status will be download automatically and send to you(Options:yes or no; don't write in capital letter)",
+      "value":"no",
+      "required":false
+    }
+    ,
+     "PM_PERMIT" :
+     {
+      "description":"Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
+      "value":"no",
+      "required":false
+    }
+    ,
+    "BOT_NAME" : {
+       
+      "description":"put A name for your bot",
+      "value":"CJ-MD",
+      "required":false
+
+    } ,
+     "BOT_MENU_LINKS" : {
+    
+      "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
+      "value":"https://telegra.ph/file/73895e30636d7b47fa42b.jpg,https://telegra.ph/file/adcc0cc05f6cedf4f66f8.jpg,https://telegra.ph/file/170504c86d80f16f09a3b.jpg    ",
+      "required":false
+       
+     },
+    "PUBLIC_MODE":
+    {
+      "description":"Options:yes or no",
+      "value":"no",
+      "required":false
+    }
+	,
+    "HEROKU_APY_KEY": {
+    "description": "insert your heroku api-key (this is optionnal)",
+     "required" :false
+    },
+  "HEROKU_APP_NAME": {
+    "description": "insert your heroku APP NAME (this is optionnal)",
+     "required" :false
+    }  
+	  ,
+    "SESSION_ID":
+    {
+      "description":"put your session ID , the code you receive after scanning Qr code",   
+      "value":"",
+      "required":true
+      
+    },
+    "OWNER_NAME":
+    {
+    
+    "desc": "Your Name",
+    "required": false,
+    "value": "CJ"
+  },
+    "OWNER_NUMBER":
+  {
+    
+    "desc": "Your number , don't put '+' and put your country code(example '254')",
+    "required":false,
+    "value": "254757977429"
+  },
+    "WARN_COUNT":
+  {
+    "desc": "this is the limit of warn for warning commands",
+    "required": false,
+    "value": "3"
+  },
+  "STARTING_BOT_MESSAGE":
+  {
+    "description": "if you don't want starting-bot-message put no or else put yes",
+    "required": true,
+    "value": "yes"
+  },
+  "PRESENCE":{
+    "description":"Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
+    "value":"3",
+    "required": false
+  },
+  "ANTI_DELETE_MESSAGE" : {
+    "description": "if you want to enable anti delete message put yes or else put no",
+    "value": "no",
+    "required": false
+  }
+  },
+
+  "formation": {
+		"worker": {
+			"quantity": 1,
+			"size": "basic"
+		}
+	},
+
+  "addons":[
+    {
+      "plan":"heroku-postgresql"
+    }
+  ]
+}
