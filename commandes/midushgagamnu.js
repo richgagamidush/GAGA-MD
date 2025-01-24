@@ -33,15 +33,15 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭────✧${s.BOT}✧────◆
-│   *Préfix* : ${s.PREFIX}
-│   *Owner* : ${s.OWNER_NAME}
-│   *Mode* : ${mode}
-│   *Cmds* : ${cm.length}
-│   *Date* : ${date}
-│   *Hour* : ${temps}
-│   *Memory* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│   *Platform* : ${os.platform()}
-│   *Développer* : ɢᴀɢᴀ
+│🔘│*Préfix* : ${s.PREFIX}
+│🔘│*Owner* : ${s.OWNER_NAME}
+│🔘│ *Mode* : ${mode}
+│🔘│ *Cmds* : ${cm.length}
+│🔘│ *Date* : ${date}
+│🔘│ *Hour* : ${temps}
+│🔘│ *Memory* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│🔘│ *Platform* : ${os.platform()}
+│🔘│ *Développer* : GAGA
 ╰────✧XGAGA-BOT✧────◆ \n\n`;
     
 let menuMsg = `
