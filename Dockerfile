@@ -1,5 +1,3 @@
-
-
 FROM node:lts-buster
 
 RUN apt-get update && \
@@ -11,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/richgagamidush/GAGA-MD /root/gaga_Bot
-WORKDIR /root/gaga_Bot/
+RUN git clone https://github.com/richgagamidush/GAGA-MD  /root/zokou
+WORKDIR /root/zokou/
 
 
 COPY package.json .
@@ -23,4 +21,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "body.js"]
+CMD ["npm", "run" , "body.js"]
