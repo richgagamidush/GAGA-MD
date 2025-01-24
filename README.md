@@ -16,16 +16,17 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
-<p align="center">                                                   ZOMBIE MD BOT 
+<p align="center">                                                  
+     XGAGA BOTS 
 
 
 </p>
 <p align="center"> 
   <a href="https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f">
-    <img alt=Support height="390" src="https://files.catbox.moe/k7wq3r.jpg"> 
+    <img alt=Support height="390" src="https://files.catbox.moe/pp88af.jpg"> 
     </p>
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=MADE+BY+GAGA+IN+TANZANIA" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=MADE+BY+GAGA+IN+KENYA" alt="Typing SVG" /></a>
 
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
