@@ -41,8 +41,8 @@ const date = moment().format('DD/MM/YYYY');
 │   *Hour* : ${temps}
 │   *Memory* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 │   *Platform* : ${os.platform()}
-│   *Développer* : CJ
-╰─────✧WA-BOT✧─────◆ \n\n`;
+│   *Développer* : ɢᴀɢᴀ
+╰────✧XGAGA-BOT✧────◆ \n\n`;
     
 let menuMsg = `
 👋 Hello ${nomAuteurMessage} 👋
@@ -55,10 +55,10 @@ let menuMsg = `
         menuMsg += `╭────❏ ${cat} ❏`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-│ ${cmd}`;
+│🔘│ ${cmd}`;
         }
         menuMsg += `
-╰═════════════⊷ \n`
+╰═════════════✓ \n`
     }
 
     menuMsg += `
@@ -66,7 +66,7 @@ let menuMsg = `
 *»»————— ★ —————««*
 "To use a command, insert ${prefixe} followed by the command_name."
  
-    Powered by CJ-MD
+> Regards to Gaga
                                                 
 *»»————— ★ —————««*
 `;
