@@ -11,8 +11,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/CJMZEE/CJ-MD /root/cj_Bot
-WORKDIR /root/cj_Bot/
+RUN git clone https://github.com/richgagamidush/GAGA-MD /root/gaga_Bot
+WORKDIR /root/gaga_Bot/
 
 
 COPY package.json .
