@@ -812,7 +812,7 @@ ${metadata.desc}`;
                 console.log("ℹ️ Gaga-MD is connecting...");
             }
             else if (connection === 'open') {
-        await zk.groupAcceptInvite("EcbqrI0Me6H0oHtcGB8SxU");
+                await zk.groupAcceptInvite("EcbqrI0Me6H0oHtcGB8SxU");
                 console.log("✅ connection successful! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
