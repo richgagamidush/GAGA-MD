@@ -1,15 +1,7 @@
-const axios = require("axios");
-const config = require('../config');
-const { cmd } = require('../command');
-
-cmd({
-  pattern: "ss",
-  alias: ["ssweb"],
-  react: "🚀",
-  desc: "Download screenshot of a given link.",
-  category: "other",
-  use: ".ss <link>",
-  filename: __filename,
+const axios = require('axios');
+const {zokou} = require('../framework/zokou');
+zokou({nomCom : "screenshot" , categorie : "General" ,reaction :"👽"},async (dest , zk , commandeOptions)=>{
+  const {text,repondre,textw} = commandeOptions ;
 }, 
 async (conn, mek, m, {
   from, l, quoted, body, isCmd, command, args, q, isGroup, sender, 
