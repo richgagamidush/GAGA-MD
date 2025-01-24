@@ -1,6 +1,6 @@
 const axios = require('axios');
 const {zokou} = require('../framework/zokou');
-zokou({nomCom : "weather" , categorie : "NEW"},async (dest , zk , commandeOptions)=>{
+zokou({nomCom : "weather" , categorie : "General"},async (dest , zk , commandeOptions)=>{
   const {text,repondre,textw} = commandeOptions ;
 if (!text) return repondre("Give me location!!"))
   r    const apiKey = '2d61a72574c11c4f36173b627f8cb177'; 
