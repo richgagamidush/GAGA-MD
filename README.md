@@ -139,9 +139,7 @@
 
 ### THANKS TO:
 - [***Rich-Gaga-Midush🗿🗿***]('https://github.com/Xgaga-Rich)
-- For providing the base  and sevaral CMDs of **ZOMBIE-MD**
-- - [**Beltah-Tech-254**]('https://github.com/Beltah254)
-- For providing the base  and code encryption of **ZOMBIE-MD**
+- For providing the base  and sevaral CMDs of **GAGA-MD**
 - 
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
