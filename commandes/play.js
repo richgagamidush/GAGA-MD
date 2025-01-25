@@ -44,9 +44,6 @@ zokou({
 
     // List of APIs to try
     const apis = [
-      `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(audioUrl)}`,
-      `https://api.dreaded.site/api/ytdl/audio?url=${encodeURIComponent(audioUrl)}`,
-      `https://api-rin-tohsaka.vercel.app/download/ytmp3?url=${encodeURIComponent(audioUrl)}`,
       `https://api-rin-tohsaka.vercel.app/search/ytsearch?text=${encodeURIComponent(audioUrl)}`,
     ];
 
