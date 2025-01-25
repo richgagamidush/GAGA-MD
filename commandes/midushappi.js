@@ -46,7 +46,7 @@ zokou({
         document: { url: appDetails.BK9.dllink },
         fileName: `${appDetails.BK9.name}.apk`,
         mimetype: "application/vnd.android.package-archive",
-        caption: "GAGA-MD"
+        caption: "> Genarated by Gaga md"
       },
       { quoted: ms }
     );
