@@ -20,7 +20,7 @@ const Genius = require("genius-lyrics");
 const Client = new Genius.Client('jKTbbU-6X2B9yWWl-KOm7Mh3_Z6hQsgE4mmvwV3P3Qe7oNa9-hsrLxQV5l5FiAZO');
 zokou({
   'nomCom': "bible",
-  'reaction': '🧮',
+  'reaction': '🎓',
   'categorie': "General"
 }, async (_0x1d3930, _0x367c74, _0x33306c) => {
   const {
@@ -37,7 +37,7 @@ zokou({
     return _0x79010("Please specify the chapter number or name. Example: bible john 3:16");
   }
   let _0x1c7aad = await _0x12b57e.json();
-  let _0x4fd368 = "🌟 *THE HOLY BIBLE*\n\n💯 *_WE'RE READING:_* " + _0x1c7aad.reference + "\n\n🔢 *_NUMBER OF VERSES:_* " + _0x1c7aad.verses.length + "\n\n😍 *_NOW READ:_* " + _0x1c7aad.text + "\n\n🌍 *_LANGUAGE_:* " + _0x1c7aad.translation_name + "\n\n\n╭────────────────◆\n│ *_genarated by Gaga md*\n╰─────────────────◆";
+  let _0x4fd368 = "🌟 *THE HOLY BIBLE*\n\n🔘 *_WE'RE READING:_* " + _0x1c7aad.reference + "\n\n🔘 *_NUMBER OF VERSES:_* " + _0x1c7aad.verses.length + "\n\n🔘 *_NOW READ:_* " + _0x1c7aad.text + "\n\n🔘 *_LANGUAGE_:* " + _0x1c7aad.translation_name + "\n\n\n╭────────────────◆\n│ *_genarated by Gaga md*\n╰─────────────────◆";
   await _0x79010(_0x4fd368);
 });
 zokou({
@@ -120,7 +120,7 @@ zokou({
   }
 });
 zokou({
-  'nomCom': 'lyrics',
+  'nomCom': 'lyrics2',
   'reaction': '✨',
   'categorie': "Search"
 }, async (_0x34d58e, _0x347cd3, _0x50f283) => {
