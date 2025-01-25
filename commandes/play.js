@@ -44,8 +44,9 @@ zokou({
 
     // List of APIs to try
     const apis = [
-      ``,
+      `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(audioUrl)}`,
       `https://api.dreaded.site/api/ytdl/audio?url=${encodeURIComponent(audioUrl)}`,
+      
     ];
 
     let downloadData;
