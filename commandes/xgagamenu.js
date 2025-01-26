@@ -148,7 +148,7 @@ keith({ nomCom: "list", aliases: ["liste", "helplist", "commandlist"], categorie
 *Be motivated with this inspiration quote🫧*   
 "💎${randomQuote}💎"
 
-╭━━━ 〔 𝐏𝐎𝐏𝐊𝐈𝐃 𝐗𝐓𝐄𝐂𝐇 〕━━━┈⊷
+╭━━ 〔 GAGA MD MENU 〕━┈⊷
 ┃✵╭───────────────
 ┃✵│▸ *ʙᴏᴛ ᴏᴡɴᴇʀ:* ${settings.OWNER_NAME}
 ┃✵│▸ *ᴘʀᴇғɪx:* *[ ${settings.PREFIXE} ]*
@@ -195,8 +195,8 @@ keith({ nomCom: "list", aliases: ["liste", "helplist", "commandlist"], categorie
                 externalAdReply: {
                     title: "XGAGA BOTS",
                     body: "Genarated by Midumba",
-                    thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
-                    sourceUrl: "https://whatsapp.com/channel/0029VadQrNI8KMqo79BiHr3l",
+                    thumbnailUrl: "https://files.catbox.moe/oznlsw.jpg",
+                    sourceUrl: "https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F",
                     mediaType: 1,
                     renderLargerThumbnail: true
                 }
