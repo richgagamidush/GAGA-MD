@@ -37,7 +37,7 @@ zokou({
     return _0x79010("Please specify the chapter number or name. Example: bible john 3:16");
   }
   let _0x1c7aad = await _0x12b57e.json();
-  let _0x4fd368 = "⚓ *THE HOLY BIBLE*\n\n🔘 *_VERSE:_* " + _0x1c7aad.reference + "\n\n🔘 *_NO. VERSES:_* " + _0x1c7aad.verses.length + "\n\n🔘 *_NOW READ:_* " + _0x1c7aad.text + "\n\n🔘 *_LANGUAGE_:* " + _0x1c7aad.translation_name + "\n\n\n\n│ > Genarated by Gaga md\n";
+  let _0x4fd368 = "⚓ *THE HOLY BIBLE*\n\n🔘 *_VERSE:_* " + _0x1c7aad.reference + "\n\n🔘 *_NO. VERSES:_* " + _0x1c7aad.verses.length + "\n\n🔘 *_NOW READ:_* " + _0x1c7aad.text + "\n\n🔘 *_LANGUAGE_:* " + _0x1c7aad.translation_name + "\n\n\n\n> Genarated by Gaga md\n";
   await _0x79010(_0x4fd368);
 });
 zokou({
