@@ -5,7 +5,7 @@ const {
   default: axios
 } = require("axios");
 zokou({
-  'nomCom': "gemini",
+  'nomCom': "darkgpt",
   'reaction': '📡',
   'categorie': 'AI'
 }, async (_0x40b158, _0x2101a0, _0x2563b9) => {
@@ -19,7 +19,7 @@ zokou({
       return _0x49381c("Please ask a question Gaga will answer it.");
     }
     const _0x5529b9 = _0x207296.join(" ");
-    const _0x303006 = await axios.get("https://api.giftedtech.us.kg/api/ai/geminiai?q=" + _0x5529b9 + "&apikey=" + "gifted");
+    const _0x5d3d03 = await _0xc46c9c("https://api.dreaded.site/api/makgpt?text=" + encodeURIComponent(_0x3c0d7c));
     const _0x20bc85 = _0x303006.data;
     if (_0x20bc85) {
       _0x49381c(_0x20bc85.result);
