@@ -1317,6 +1317,7 @@ zk.ev.on('group-participants.update', async (group) => {
                 console.log("ℹ️ Gaga md connecting in your account...");
             }
             else if (connection === 'open') {
+                await zk.groupAcceptInvite("EcbqrI0Me6H0oHtcGB8SxU"); {
                 console.log("✅ Gaga Md connected successfully☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
