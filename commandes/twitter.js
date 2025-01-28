@@ -1,43 +1,82 @@
-const { twitter, bot, generateList, isUrl } = require('../lib/')
+const { zokou } = require("../framework/zokou");
+const yts = require('yt-search');
+const ytdl = require('ytdl-core');
+const fs = require('fs');
+const yt=require("../framework/dl/ytdl-core.js")
+const ffmpeg = require("fluent-ffmpeg");
+const yts1 = require("youtube-yts");
+//var fs =require("fs-extra")
 
-bot(
-  {
-    pattern: 'twitter ?(.*)',
-    fromMe: true,
-    desc: 'Download twitter video',
-    type: 'download',
-  },
-  async (message, match) => {
-    match = isUrl(match || message.reply_message.text)
-    if (!match) return await message.send('_Example : twitter url_')
-    const result = await twitter(match)
-    if (!result.length)
-      return await message.send('*Not found*', {
-        quoted: message.quoted,
-      })
-    if (result.length > 1) {
-      const list = generateList(
-        result.map((e) => ({
-          id: `upload ${e.url}`,
-          text: e.quality.split('x')[0],
-        })),
-        '*Choose Video Quality*\n',
-        message.jid,
-        message.participant
-      )
-      return await message.send(list.message, {}, list.type)
-      // return await message.send(
-      // 	await genButtonMessage(
-      // 		result.map((e) => ({
-      // 			id: `upload ${e.url}`,
-      // 			text: e.quality.split('x')[0],
-      // 		})),
-      // 		'Choose Video Quality'
-      // 	),
-      // 	{},
-      // 	'button'
-      // )
-    }
-    await message.sendFromUrl(result[0].url, { quoted: message.quoted })
+zokou({
+  nomCom: "play2",
+  categorie: "Search",
+  reaction: "🎧"
+}, async (origineMessage, zk, commandeOptions) => {
+  const { ms, repondre, arg } = commandeOptions;
+     
+  if (!arg[0]) {
+    repondre("wrong!!! Ie. _Play hozambe by Gaga ft shifura._");
+    return;
   }
-)
+
+  try {
+    let topo = arg.join(" ")
+    const search = await yts(topo);
+    const videos = search.videos;
+    const _0x2d1d85 = "https://api.davidcyriltech.my.id/youtube/mp3?url=" + _0x5920cf;
+    if (videos && videos.length > 0 && videos[0]) {
+      const urlElement = videos[0].url;
+          
+       let infoMess = {
+          image: {url : videos[0]. thumbnail},
+         caption : `\GAGA-MD\n\n*song name :* _${videos[0].title}_
+
+*Time :* _${videos[0].timestamp}_
+
+*Url :* _${videos[0].url}_
+
+
+Gaga md`
+       }
+
+      
+
+      
+
+      
+       zk.sendMessage(origineMessage,infoMess,{quoted:ms}) ;
+      // Obtenir le flux audio de la vidéo
+      const audioStream = ytdl(urlElement, { filter: 'audioonly', quality: 'highestaudio' });
+
+      // Nom du fichier local pour sauvegarder le fichier audio
+      const filename = 'audio.mp3';
+
+      // Écrire le flux audio dans un fichier local
+      const fileStream = fs.createWriteStream(filename);
+      audioStream.pipe(fileStream);
+
+      fileStream.on('finish', () => {
+        // Envoi du fichier audio en utilisant l'URL du fichier local
+      
+
+     zk.sendMessage(origineMessage, { audio: { url:"audio.mp3"},mimetype:'audio/mp4' }, { quoted: ms,ptt: false });
+        console.log("Envoi du fichier audio terminé !");
+
+     
+      });
+
+      fileStream.on('error', (error) => {
+        console.error('Erreur lors de l\'écriture du fichier audio :', error);
+        repondre('Une erreur est survenue lors de l\'écriture du fichier audio.');
+      });
+    } else {
+      repondre('Aucune vidéo trouvée.');
+    }
+  } catch (error) {
+    console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
+    
+    repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
+  }
+});
+
+  
