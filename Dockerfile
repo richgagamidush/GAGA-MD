@@ -21,4 +21,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "midush.js"]
+CMD ["npm", "run" , "midush.js"]
