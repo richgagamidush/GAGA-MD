@@ -2,12 +2,12 @@
   "name": "Gaga-md",
   "version": "2.0.0",
   "description": "",
-  "main": "body.js",
+  "main": "gaga.js",
   "scripts": {
-    "test": "node body.js",
-    "s": "node body.js",
-    "zokou": "pm2 start body.js --attach",
-    "zokou": "pm2 start body.js --attach",
+    "test": "node gaga.js",
+    "s": "node gaga.js",
+    "zokou": "pm2 start gaga.js --attach",
+    "zokou": "pm2 start gaga.js --attach",
     "c": "tsc"
   },
   "keywords": [
