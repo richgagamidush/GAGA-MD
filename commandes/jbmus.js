@@ -17,7 +17,7 @@ cmd({
     return reply("Please provide a title or link (Spotify/YouTube)!");
   }
 
-  reply("Njabulo JB Fetching audio... 💬");
+  reply("GAGA MD Fetching audio... ");
 
   let spotifySent = false;
   let youtubeSent = false;
@@ -43,7 +43,7 @@ cmd({
           contextInfo: {
             externalAdReply: {
               title: spotifyTrack.title,
-              body: "Njabulo JB 🥰💖: SPOTIFY",
+              body: "GAGA MD: SPOTIFY",
               mediaType: 1,
               sourceUrl: spotifyTrack.url,
               renderLargerThumbnail: true
@@ -76,7 +76,7 @@ cmd({
           contextInfo: {
             externalAdReply: {
               title: youtubeVideo.title,
-              body: "Njabulo JB 🥰: YOUTUBE",
+              body: "GAGA MD: YOUTUBE",
               mediaType: 1,
               sourceUrl: youtubeVideo.url,
               renderLargerThumbnail: true
@@ -99,8 +99,8 @@ cmd({
   } else if (spotifySent && youtubeSent) {
     reply("Both Spotify and YouTube audio sent successfully.");
   } else if (spotifySent) {
-    reply("RHODVICK TECH: Spotify audio sent successfully.");
+    reply("GAGA TECH: Spotify audio sent successfully.");
   } else if (youtubeSent) {
-    reply("*Njabulo JB: Download and successfully*.");
+    reply("*GAGA MD: Download and successfully*.");
   }
 });
