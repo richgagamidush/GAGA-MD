@@ -1,17 +1,12 @@
 {
-  "name": "GAGA MD",
-  "description": "This BOT was developed by Gaga.",
-  "keywords": [
-    "bot",
-    "node",
-    "baileys",
-    "whatsapp"
-  ],
-  "logo": "https://files.catbox.moe/oznlsw.jpg",
-  "repository": "https://github.com/richgagamidush/GAGA-MD",
-  "succes_url": "/",
-  "stack": "container",
-  "env": {
+  "name":"GAGA-MD",
+  "description":"a Whatsapp bot modified by Gaga to make your Whatsapp more interesting",
+  "keywords":["bot","node","baileys","whatsapp"],
+  "logo":"https://files.catbox.moe/oznlsw.jpg",
+  "repository":"https://github.com/richgagamidush/GAGA-MD",
+  "succes_url":"/",
+  "stack":"container",
+  "env":{
     "PREFIX": {
       "description": "choose your prefix of bot",
       "value": ".",
