@@ -1,17 +1,15 @@
-const axios = require("axios");
-const yts = require("yt-search");
-const { youtube } = require("btch-downloader");
-const { cmd } = require('../command');
+const { zokou } = require("../framework/zokou");
+const axios = require('axios');
+const ytSearch = require('yt-search');
 
-cmd({
-  pattern: 'audio3',
-  alias: ['spotify', "ytmusic", "play"],
-  react: '🎸',
-  desc: "Fetch audio from Spotify or YouTube",
-  category: "media",
-  filename: __filename
-}, async (client, message, details, context) => {
-  const { q, from, reply } = context;
+// Define the command with aliases
+zokou({
+  nomCom: "play",
+  aliases: ["play", "music", "song", "mp3"],
+  categorie: "Search",
+  reaction: "🎵"
+}, async (dest, zk, commandOptions) => {
+  const { arg, ms, repondre } = commandOptions;
 
   if (!q) {
     return reply("Please provide a title or link (Spotify/YouTube)!");
