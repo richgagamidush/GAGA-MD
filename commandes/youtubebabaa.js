@@ -45,8 +45,8 @@ zokou({
     // List of APIs to try
     const apis = [
       `https://spotifyapi.caliphdev.com/api/download/track?url=${encodeURIComponent(audioUrl)}`,
-      `https://spotifyapi.caliphdev.com/api/search/tracks?q=${encodeURIComponent(videoUrl)}`,
-      
+      `https://spotifyapi.caliphdev.com/api/search/tracks?q=${encodeURIComponent(audioUrl)}`,
+      `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(audioUrl)}`,
 
     ];
 
