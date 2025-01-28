@@ -5,16 +5,16 @@ const ytSearch = require('yt-search');
 
 // Define the command with aliases
 zokou({
-  nomCom: "video",
-  aliases: ["musicvid", "ytmp4", "luckyvideo", "mp4"],
+  nomCom: "play",
+  aliases: ["audio", "music", "song", "mp3"],
   categorie: "Search",
-  reaction: "💻"
+  reaction: "🎵"
 }, async (dest, zk, commandOptions) => {
   const { arg, ms, repondre } = commandOptions;
 
   // Check if a query is provided
   if (!arg[0]) {
-    return repondre("Please provide a video name.");
+    return repondre("Please provide a song name.");
   }
 
   const query = arg.join(" ");
@@ -23,13 +23,13 @@ zokou({
     // Perform a YouTube search based on the query
     const searchResults = await ytSearch(query);
 
-    // Check if any videos were found
+    // Check if any audio were found
     if (!searchResults || !searchResults.videos.length) {
       return repondre('No video found for the specified query.');
     }
 
-    const firstVideo = searchResults.videos[0];
-    const videoUrl = firstVideo.url;
+    const firstVideo = searchResults.audios[0];
+    const audioUrl = firstaudio.url;
 
     // Function to get download data from APIs
     const getDownloadData = async (url) => {
@@ -44,11 +44,9 @@ zokou({
 
     // List of APIs to try
     const apis = [
-      `https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
-      `https://api.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
-      `https://www.dark-yasiya-api.site/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
-      `https://api.giftedtech.web.id/api/download/dlmp4?url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
-      `https://api.dreaded.site/api/ytdl/audio?url=${encodeURIComponent(videoUrl)}`
+      `https://spotifyapi.caliphdev.com/api/download/track?url=${encodeURIComponent(audioUrl)}`,
+      `https://spotifyapi.caliphdev.com/api/search/tracks?q=${encodeURIComponent(videoUrl)}`,
+      
 
     ];
 
@@ -68,8 +66,8 @@ zokou({
 
     // Prepare the message payload with external ad details
     const messagePayload = {
-      video: { url: downloadUrl },
-      mimetype: 'video/mp4',
+      audio: { url: downloadUrl },
+      mimetype: 'audio/mp3',
       contextInfo: {
         externalAdReply: {
           title: videoDetails.title,
