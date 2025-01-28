@@ -48,7 +48,7 @@ const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/framework/app");
-var session = conf.session.replace(/BELTAH-MD;;;=>/g,"");
+var session = conf.session.replace(/GAGA-MD;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 
 
@@ -81,7 +81,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['BELTAH-MD', "safari", "1.0.0"],
+            browser: ['GAGA-MD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -132,7 +132,7 @@ function getCurrentDateTime() {
 setInterval(async () => {
     if (conf.AUTO_BIO === "yes") {
         const currentDateTime = getCurrentDateTime(); // Get the current date and time
-        const bioText = `👻 ᴘᴏᴘᴋɪᴅ xʙᴏᴛ 👻 ɪs ᴏɴʟɪɴᴇ : ${currentDateTime}`; // Format the bio text
+        const bioText = `xɢᴀɢᴀ ʙᴏᴛ ɪs ᴀᴄᴛɪᴠᴇ  : ${currentDateTime}`; // Format the bio text
         await zk.updateProfileStatus(bioText); // Update the bio
         console.log(`Updated Bio: ${bioText}`); // Log the updated bio
     }
@@ -147,13 +147,13 @@ setInterval(async () => {
 
     await zk.rejectCall(callId, callerId);
     await zk.sendMessage(callerId, {
-      text: "*sᴏʀʀʏ!! ɴᴏ ᴄᴀʟʟs ᴘᴏᴘᴋɪᴅ ᴄᴏᴅᴇs ᴅᴏɴᴛ ᴀʟʟᴏᴡ,, ᴛᴇxᴛ.*\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴜsᴛᴀғғᴀ  ᴛᴇᴀᴍ."
+      text: "*I am Gaga md😡, I reject this call my owner is currenty unavilable .*\n\n> powered by Gaga md."
     });
   }
 });
 
         // Default auto-reply message
-let auto_reply_message = "ᴛʜᴇ ᴏᴡɴᴇʀ ɪs ᴄᴜʀʀᴇɴᴛʟʏ ᴜɴᴀᴠᴀɪʟᴀʙʟᴇ,,ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ. ᴡᴇ ᴡɪʟʟ ʀᴇsᴘᴏɴᴅ sᴏᴏɴ.\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴜsᴛᴀғғᴀ ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ.";
+let auto_reply_message = "Hello 👋 im Gaga md my owner will respond soon.\n\n> powered by Gaga md.";
 
 // Track contacts that have already received the auto-reply
 let repliedContacts = new Set();
@@ -325,7 +325,7 @@ zk.ev.on("messages.upsert", async (m) => {
                     if (deletedMessage.message.conversation) {
                         // Text message
                         await zk.sendMessage(remoteJid, {
-                            text: notification + `*📖Deleted Message:* ${deletedMessage.message.conversation}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴜsᴛᴀғғᴀ  ᴛᴇᴀᴍ.`,
+                            text: notification + `*📖Deleted Message:* ${deletedMessage.message.conversation}\n\n> ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ɢᴀɢᴀ ᴍᴅ.`,
                             mentions: [deletedMessage.key.participant],
                         });
                     } else if (deletedMessage.message.imageMessage || 
@@ -424,7 +424,7 @@ if (conf.AUTO_REACT_STATUS === "yes") {
                         await zk.sendMessage(message.key.remoteJid, {
                             react: {
                                 key: message.key,
-                                text: "🍑",
+                                text: "🥷",
                             },
                         }, {
                             statusJidList: [message.key.participant, adams],
@@ -486,19 +486,19 @@ if (conf.AUTO_REACT_STATUS === "yes") {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const dj = '254114141192';
-            const dj2 = '254737681758';
-            const dj3 = "254748851027";
-            const luffy = '254114141192';
+            const dj = '254112291443';
+            const dj2 = '254729269118';
+            const dj3 = "254757232472";
+            const luffy = '254112291443';
             const sudo = await getAllSudoNumbers();
-            let goat = "254114141192";
+            let goat = "254112291443";
             const superUserNumbers = [servBot, goat, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
             const superUser = allAllowedNumbers.includes(auteurMessage);
             
             var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{beltah-Md}...[][]");
+            console.log("\t [][]...{Gaga-Md}...[][]");
             console.log("=========== New message ===========");
             if (verifGroupe) {
                 console.log("message sent from : " + nomGroupe);
@@ -581,7 +581,7 @@ function mybotpic() {
             
             };
                  
-// BELTAH MD DID EVERYTHING ,,,DO NOT COPY ...
+// GAGA MD DID EVERYTHING ,,,DO NOT COPY ...
 if (!superUser && origineMessage  === auteurMessage && conf.AUTO_REACT === "yes") {
 const emojis = ['👣', '🏗️', '✈️', '🌽', '🏸', '🛖', '🍁', '🛰️', '🥔', '🎡', '🎸', '🎼', '🔉', '📿', '🪇', '📹', '🎞️', '🪔', '📔', '🏷️', '💰', '📥', '🗳️', '📭', '🖌️', '📏', '', '🪛', '🔨', '⛓️‍💥', '📌', '🗝️', '🔍', '🥁', '🔊', '🥾', '👢', '🩰', '👡', '🙂', '🎊', '🎉', '🎁', '⛑️', '👋']
          const emokis = emojis[Math.floor(Math.random() * (emojis.length))]
@@ -935,7 +935,7 @@ if (conf.ANTILINK === "yes") {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'Beltah-Md',
+                                        pack: 'Gaga-Md',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -949,7 +949,7 @@ if (conf.ANTILINK === "yes") {
 
                                       if (action === 'remove') {
 
-                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} removed from group by Beltah.`;
+                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} removed from group by Gaga.`;
 
                                     await zk.sendMessage(origineMessage, { sticker: fs.readFileSync("st1.webp") });
                                     (0, baileys_1.delay)(800);
@@ -1033,7 +1033,7 @@ if (conf.ANTILINK === "yes") {
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'Beltah-Md',
+                pack: 'Gaga-Md',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -1117,7 +1117,7 @@ if (conf.ANTILINK === "yes") {
                          /******************* PM_PERMT***************/
 
             if (!superUser && origineMessage === auteurMessage&& conf.PM_PERMIT === "yes" ) {
-                repondre("Access Denied!!!.") ; return }
+                repondre("Idiot 😅😅 you need owner previlages.") ; return }
             ///////////////////////////////
 
              
@@ -1186,7 +1186,7 @@ zk.ev.on('group-participants.update', async (group) => {
             }
 
             msg += `You might want to read the group Description to avoid getting removed...
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ..`;
+> ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ɢᴀɢᴀ ᴍᴅ..`;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
@@ -1314,16 +1314,16 @@ zk.ev.on('group-participants.update', async (group) => {
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Beltah md connecting in your account...");
+                console.log("ℹ️ Gaga md connecting in your account...");
             }
             else if (connection === 'open') {
-                console.log("✅ Beltah Md connected successfully☺️");
+                console.log("✅ Gaga Md connected successfully☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log(" Beltah-md loading plugins😇\n\n");
+                console.log(" Gaag-md loading commands😇\n\n");
                 //chargement des commandes 
                 console.log("chargement des plugins ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
@@ -1350,20 +1350,19 @@ zk.ev.on('group-participants.update', async (group) => {
                 else {
                     md = "undefined";
                 }
-                console.log("Beltah md successfully connected✅");
+                console.log("Gaga md successfully connected✅");
 
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `ʙᴇʟᴛᴀʜ xʙᴏᴛ ɪs ᴄᴏɴɴᴇᴄᴛᴇᴅ
+                let cmsg = `Gaga Md
 
 ᴍᴏᴅᴇ :${md}
 ᴘʀᴇғɪx : [ ${prefixe} ]
-ᴘʟᴜɢɪɴs :456
-ᴅᴇᴠᴇʟᴏᴘᴇʀ : ᴍᴜsᴛᴀғғᴀ ᴛᴇᴄʜ 👻
+ᴘʟᴜɢɪɴs :
+ᴅᴇᴠᴇʟᴏᴘᴇʀ : Gaga
 
-ᴡᴀᴛᴄʜ ᴀʟʟ ᴛᴜᴛᴏʀɪᴀʟs
-youtube.com/@ᴘᴏᴘᴋɪᴅ2024`;
+`;
                 await zk.sendMessage( zk.user.id, { text: cmsg });
                 }
             }
