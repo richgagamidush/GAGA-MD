@@ -41,6 +41,12 @@
       "description": "Your contacts will be saved automatically. ",
       "value": "yes",
       "required": false
+ } ,
+     "BOT_MENU_LINKS" : {
+    
+      "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
+      "value":"https://files.catbox.moe/oznlsw.jpg",
+      "required":false  
     },
     "ANTIDELETEDM": {
       "description": "deleted messages will be detected lively.and sent directly after deletion",
