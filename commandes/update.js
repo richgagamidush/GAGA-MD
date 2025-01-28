@@ -1,18 +1,38 @@
-const zokou = require('fs');
-const { exec } = require('child_process');
-const { cmd } = require('../command');
 
-cmd({
-    pattern: "update",
-    react: "🚀",
-    desc: "Update the repository from GitHub",
-    category: "system",
-    use: ".update",
-    filename: __filename,
-}, async (conn, mek, m, { from, reply }) => {
+const util = require('util');
+const fs = require('fs-extra');
+const { zokou } = require(__dirname + "/../framework/zokou");
+const { format } = require(__dirname + "/../framework/mesfonctions");
+const os = require("os");
+const moment = require("moment-timezone");
+const s = require(__dirname + "/../set");
+const more = String.fromCharCode(8206)
+const readmore = more.repeat(4001)
+
+zokou({ nomCom: "update", categorie: "system" }, async (dest, zk, commandeOptions) => {
+    let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   async (dest, zk, commandeOptions, { from, reply }) => {
     try {
         const repoUrl = 'https://github.com/richgagamidush/GAGA-MD.git'; // GitHub repository URL
-        const targetFolder = 'plugins'; // Local folder for the repo
+        const targetFolder = 'commandes'; // Local folder for the repo
 
         // Ensure the target folder exists
         if (!fs.existsSync(targetFolder)) {
