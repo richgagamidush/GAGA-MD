@@ -1314,23 +1314,23 @@ zk.ev.on('group-participants.update', async (group) => {
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Beltah md connecting in your account...");
+                console.log("ℹ️ Gaga md connecting in your account...");
             }
             else if (connection === 'open') {
-                console.log("✅ Beltah Md connected successfully☺️");
+                console.log("✅ Gaga Md connected successfully☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log(" Beltah-md loading plugins😇\n\n");
+                console.log(" Gaga-md loading commandes😇\n\n");
                 //chargement des commandes 
                 console.log("chargement des plugins ...\n");
-                fs.readdirSync(__dirname + "/plugins").forEach((fichier) => {
+                fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
-                            require(__dirname + "/plugins/" + fichier);
-                            console.log(fichier + " Loaded successfully by Beltah✔️");
+                            require(__dirname + "/commandes/" + fichier);
+                            console.log(fichier + " Loaded successfully by Gaga✔️");
                         }
                         catch (e) {
                             console.log(`${fichier} could not be loaded for the following reasons : ${e}`);
@@ -1350,7 +1350,7 @@ zk.ev.on('group-participants.update', async (group) => {
                 else {
                     md = "undefined";
                 }
-                console.log("Beltah md successfully connected✅");
+                console.log("Gaga md successfully connected✅");
 
                 await activateCrons();
                 
