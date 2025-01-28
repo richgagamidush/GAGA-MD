@@ -1,9 +1,8 @@
 {
-  "name":"CJ-MD",
-  "description":"a Whatsapp bot modified by CJ to make your Whatsapp more interesting",
+  "name":"GAGA-MD",
+  "description":"a Whatsapp bot modified by Midumba Gaga to make your Whatsapp more interesting",
   "keywords":["bot","node","baileys","whatsapp"],
-  "logo":"https://raw.githubusercontent.com/CJMZEE/CJ-MD/main/CJ.jpg",
-  "repository":"https://github.com/CJMZEE/CJ-MD",
+  "logo":"https://fileshttps://github.com/richgagamidush/GAGA-MDhttps://github.com/richgagamidush/GAGA-MD",
   "succes_url":"/",
   "stack":"container",
   "env":{
@@ -42,7 +41,7 @@
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://telegra.ph/file/73895e30636d7b47fa42b.jpg,https://telegra.ph/file/adcc0cc05f6cedf4f66f8.jpg,https://telegra.ph/file/170504c86d80f16f09a3b.jpg    ",
+      "value":"https://files.catbox.moe/oznlsw.jpg",
       "required":false
        
      },
@@ -74,14 +73,14 @@
     
     "desc": "Your Name",
     "required": false,
-    "value": "CJ"
+    "value": "Gaga"
   },
     "OWNER_NUMBER":
   {
     
     "desc": "Your number , don't put '+' and put your country code(example '254')",
     "required":false,
-    "value": "254757977429"
+    "value": "254112291443"
   },
     "WARN_COUNT":
   {
