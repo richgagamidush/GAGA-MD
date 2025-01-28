@@ -27,14 +27,14 @@
      "PM_PERMIT" :
      {
       "description":"Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
-      "value":"no",
+      "value":"yes",
       "required":false
     }
     ,
     "BOT_NAME" : {
        
       "description":"put A name for your bot",
-      "value":"CJ-MD",
+      "value":"GAGA-MD",
       "required":false
 
     } ,
