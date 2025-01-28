@@ -1,57 +1,92 @@
-const { zokou } = require('../framework/zokou');
-const traduire = require("../framework/traduction") ;
-const s = require('../set');
+
+const { zokou } = require("../framework/zokou");
 const axios = require('axios');
+const ytSearch = require('yt-search');
 
-/* 
-Created By anyway tech
-Don't claim, okey 
-*/
+// Define the command with aliases
+zokou({
+  nomCom: "videodoc",
+  aliases: ["musicvideodoc", "ytmp4doc", "luckyvideodoc", "mp4doc"],
+  categorie: "Search",
+  reaction: "📷"
+}, async (dest, zk, commandOptions) => {
+  const { arg, ms, repondre } = commandOptions;
 
-zokou({nomCom:"gpt4",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
+  // Check if a query is provided
+  if (!arg[0]) {
+    return repondre("Please provide a video document name.");
+  }
 
-  const {repondre,ms,arg}=commandeOptions;
-  
-async function gpt4(q) {
-  const headers = {
-    'Content-Type': 'application/json',
-    'Referer': 'https://chatgpt4online.org/',
-    'Sec-Ch-Ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
-    'Sec-Ch-Ua-Mobile': '?0',
-    'Sec-Ch-Ua-Platform': '"Windows"',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-    'X-Wp-Nonce': '152990aad3'
-  };
-
-  const params = {
-    "botId": "default",
-    "customId": null,
-    "session": "N/A",
-    "chatId": "r20gbr387ua",
-    "contextId": 58,
-    "messages": [
-      {
-        "id": "0aqernpzbas7",
-        "role": "assistant",
-        "content": "Hi! How can I help you?",
-        "who": "AI: ",
-        "timestamp": 1719360952775
-      }
-    ],
-    "newMessage": q,
-    "newFileId": null,
-    "stream": false
-  };
+  const query = arg.join(" ");
 
   try {
-    const response = await axios.post("https://chatgpt4online.org/wp-json/mwai-ui/v1/chats/submit", params, { headers });
-    console.log('Response:', response.data);
+    // Perform a YouTube search based on the query
+    const searchResults = await ytSearch(query);
+
+    // Check if any videos were found
+    if (!searchResults || !searchResults.videos.length) {
+      return repondre('No video document found for the specified query.');
+    }
+
+    const firstVideo = searchResults.videos[0];
+    const videoUrl = firstVideo.url;
+
+    // Function to get download data from APIs
+    const getDownloadData = async (url) => {
+      try {
+        const response = await axios.get(url);
+        return response.data;
+      } catch (error) {
+        console.error('Error fetching data from API:', error);
+        return { success: false };
+      }
+    };
+
+    // List of APIs to try
+    const apis = [
+      `https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
+      `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
+      `https://www.dark-yasiya-api.site/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
+      `https://api.giftedtech.web.id/api/download/dlmp3?url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
+      `https://api.dreaded.site/api/ytdl/audio?url=${encodeURIComponent(videoUrl)}`
+    ];
+
+    let downloadData;
+    for (const api of apis) {
+      downloadData = await getDownloadData(api);
+      if (downloadData && downloadData.success) break;
+    }
+
+    // Check if a valid download URL was found
+    if (!downloadData || !downloadData.success) {
+      return repondre('Failed to retrieve download URL from all sources. Please try again later.');
+    }
+
+    const downloadUrl = downloadData.result.download_url;
+    const videoDetails = downloadData.result;
+
+    // Prepare the message payload with external ad details
+    const messagePayload = {
+      document: { url: downloadUrl },
+      mimetype: 'video/mp4',
+      contextInfo: {
+        externalAdReply: {
+          title: "GAGA MP4 player" ,
+          body: videoDetails.title,
+          mediaType: 1,
+          sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F',
+          thumbnailUrl: "https://files.catbox.moe/0zqr00.jpg" ,
+          renderLargerThumbnail: false,
+          showAdAttribution: true,
+        },
+      },
+    };
+
+    // Send the download link to the user
+    await zk.sendMessage(dest, messagePayload, { quoted: ms });
+
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error during download process:', error);
+    return repondre(`Download failed due to an error: ${error.message || error}`);
   }
-}
-
-gpt4('kapan kamu di update??');
-
-Feature: Chat Gpt 4
-Reason: -
+});
