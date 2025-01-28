@@ -95,7 +95,7 @@ setTimeout(() => {
                 keys: (0, baileys_1.makeCacheableSignalKeyStore)(state.keys, logger),
             },
             /////////
-            
+     },       
   var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
   var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -155,6 +155,20 @@ const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("./bdd
         };
         const zk = (0, baileys_1.default)(sockOptions);
         store.bind(zk.ev);
+//////////
+            getMessage: async (key) => {
+                if (store) {
+                    const msg = await store.loadMessage(key.remoteJid, key.id, undefined);
+                    return msg.message || undefined;
+                }
+                return {
+                    conversation: 'An Error Occurred, Repeat Command!'
+                };
+            }
+            ///////
+        };
+        const zk = (0, baileys_1.default)(sockOptions);
+        store.bind(zk.ev);
         
 //setInterval(() => { store.writeToFile("store.json"); }, 3000);
 
@@ -173,6 +187,7 @@ function getCurrentDateTime() {
     const dateTime = new Intl.DateTimeFormat('en-KE', options).format(new Date());
     return dateTime;
 }
+
 
 // Auto Bio Update Interval
 setInterval(async () => {
