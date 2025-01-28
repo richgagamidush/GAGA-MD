@@ -1,4 +1,4 @@
-const fs = require('fs');
+const zokou = require('fs');
 const { exec } = require('child_process');
 const { cmd } = require('../command');
 
