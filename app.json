@@ -26,8 +26,13 @@
       "description": "Your contact messages will be replied automatically(type yes to active or no to deactive  ; don't write in capital letter)",
       "value": "no",
       "required": false
-          },
-    "ANTIVV": {
+     },
+     "BOT_MENU_LINKS" : {
+      "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
+      "value":"https://files.catbox.moe/oznlsw.jpg",
+      "required":false  
+     },
+     "ANTIVV": {
       "description": "Detect all view once media and send them to your dm",
       "value": "yes",
       "required": false
