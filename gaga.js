@@ -222,7 +222,7 @@ function createNotification(deletedMessage) {
 
     let notification = `*[ ᴍᴇssᴀɢᴇ ᴅᴇʟᴇᴛɪᴏɴ ᴅᴇᴛᴇᴄᴛᴇᴅ ]*\n\n`;
     notification += `*⌚Deletion Time:* ${timeInNairobi}\n`;
-    notification += `*👤Deleted By:* @${deletedBy.split('@')[0]}\n\n`;
+    notification += `*👤Deleted By:* @${deletedBy.split('@')[0]}\n\n> ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ɢᴀɢᴀ ᴍᴅ`;
 
     return notification;
 }
