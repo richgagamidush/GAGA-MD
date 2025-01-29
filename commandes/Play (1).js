@@ -72,7 +72,7 @@ zokou({
         mimetype: 'audio/mp4',
         contextInfo: {
           externalAdReply: {
-            title: videoDetails.title,
+            title: "ɢᴀɢᴀ ᴍᴅ ᴀᴜᴅɪᴏ ᴘʟᴀʏᴇʀ🎵",
             body: videoDetails.title,
             mediaType: 1,
             sourceUrl: conf.GURL,
