@@ -32,7 +32,7 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-╭────✧${s.BOT}✧────◆
+╭────✧𝗚𝗔𝗚𝗔 𝗠𝗗✧────◆
 │🔘│ *Préfix* : ${s.PREFIX}
 │🔘│ *Owner* : ${s.OWNER_NAME}
 │🔘│ *Mode* : ${mode}
@@ -62,13 +62,11 @@ let menuMsg = `
     }
 
     menuMsg += `
-◇            ◇
-*»»————— ★ —————««*
-"To use a command, insert ${prefixe} followed by the command_name."
- 
+           
+> ᴛʜᴀɴᴋs ғᴏʀ ᴄʜᴏᴏsɪɴɢ ɢᴀɢᴀ ᴍᴅ
+"To use a command, insert ${prefixe} followed by the command_name." 
 > Regards to Gaga
-                                                
-*»»————— ★ —————««*
+
 `;
 
    var lien = mybotpic();
