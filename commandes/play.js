@@ -8,7 +8,7 @@ zokou({
   nomCom: "play",
   aliases: ["music", "ytmp3", "audio", "mp3"],
   categorie: "Search",
-  reaction: "🎙️"
+  reaction: "🎸"
 }, async (dest, zk, commandOptions) => {
   const { arg, ms, repondre } = commandOptions;
 
@@ -74,8 +74,8 @@ zokou({
           title: videoDetails.title,
           body: videoDetails.title,
           mediaType: 1,
-          sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F',
-          thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg" ,
+          sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F',
+          thumbnailUrl: "https://files.catbox.moe/0zqr00.jpg" ,
           renderLargerThumbnail: false,
           showAdAttribution: true,
         },
