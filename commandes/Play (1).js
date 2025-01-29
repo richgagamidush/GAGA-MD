@@ -1,10 +1,10 @@
-const { keith } = require("../keizzah/keith");
+const { zokou } = require("../framework/zokou");
 const axios = require('axios');
 const ytSearch = require('yt-search');
 const conf = require(__dirname + '/../set');
 
 // Define the command with aliases for play
-keith({
+zokou({
   nomCom: "play",
   aliases: ["song", "playdoc", "audio", "mp3"],
   categorie: "Search",
