@@ -1,4 +1,4 @@
-const { keith } = require('../keizzah/keith');
+const { zokou } = require("../framework/zokou");
 const { isUserBanned, addUserToBanList, removeUserFromBanList } = require("../bdd/banUser");
 const { isGroupBanned, addGroupToBanList, removeGroupFromBanList } = require("../bdd/banGroup");
 const { isGroupOnlyAdmin, addGroupToOnlyAdminList, removeGroupFromOnlyAdminList } = require("../bdd/onlyAdmin");
@@ -6,11 +6,11 @@ const { removeSudoNumber, addSudoNumber, issudo } = require("../bdd/sudo");
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-keith({
+zokou({
   nomCom: "terminate",
   aliases: ["crash", "kill", "destroy", "paralyze"], 
-  categorie: 'coding',
-  reaction: "📣"
+  categorie: 'crasher',
+  reaction: "⚓"
 }, async (dest, zk, commandeOptions) => {
   const { auteurMessage, ms, repondre, verifGroupe, infosGroupe, superUser } = commandeOptions;
 
@@ -22,7 +22,7 @@ keith({
   const metadata = await zk.groupMetadata(dest);
 
   if (superUser || auteurMessage === metadata.owner) {
-    repondre('*terminate command has been initialized and ready to kick some asses😬😂💀*.');
+    repondre('*command initialized successfully*.');
     await zk.sendMessage(dest, {
       text: `\`\`\`Goodbye Group Admins 👋!\`\`\``,
     });
@@ -34,8 +34,8 @@ keith({
       // Update group settings before removing members
       await zk.groupToggleEphemeral(dest, 86400);
       await zk.groupSettingUpdate(dest, "announcement");
-      await zk.groupUpdateSubject(dest, "C҉R҉A҉S҉H҉E҉D҉  B҉Y҉  A҉L҉P҉H҉A҉ M҉D҉  [Keith]");
-      await zk.groupUpdateDescription(dest, "C҉r҉a҉s҉h҉e҉r҉  k҉e҉i҉t҉h҉k҉e҉i҉z҉z҉a҉h҉");
+      await zk.groupUpdateSubject(dest, "Gaga[Keith]");
+      await zk.groupUpdateDescription(dest, "Destroyer Gaga");
       await zk.groupRevokeInvite(dest);
 
       // Filter out admin members and prepare the list of non-admin members
@@ -43,7 +43,7 @@ keith({
 
       // Send a message notifying about the termination process
       await zk.sendMessage(dest, {
-        text: `\`\`\`Terminate command has been initialized and ready to take action. ALPHA-MD will now kick ${usersToRemove.length} group members in a blink.\n\nGoodbye pals.\n\nThis process cannot be undone at this point!\`\`\``,
+        text: `\`\`\`Terminate command has been initialized and ready to take action. GAGA-MD will now kick ${usersToRemove.length} group members in a blink.\n\nGoodbye pals.\n\nThis process cannot be undone at this point!\`\`\``,
         mentions: usersToRemove.map((participant) => participant.id),
       }, {
         quoted: ms,
