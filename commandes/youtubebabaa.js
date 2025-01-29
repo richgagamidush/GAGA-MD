@@ -5,7 +5,7 @@ const ytSearch = require('yt-search');
 
 // Define the command with aliases
 zokou({
-  nomCom: "audio",
+  nomCom: "play",
   aliases: ["play", "music", "song", "mp3"],
   categorie: "Search",
   reaction: "🎵"
@@ -44,9 +44,9 @@ zokou({
 
     // List of APIs to try
     const apis = [
-      `https://spotifyapi.caliphdev.com/api/download/track?url=${encodeURIComponent(audioUrl)}`,
-      `https://spotifyapi.caliphdev.com/api/search/tracks?q=${encodeURIComponent(audioUrl)}`,
-      `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(audioUrl)}`,
+      `https://spotifyapi.caliphdev.com/api/search/tracks?q=${encodeURIComponent(q)}`,
+      `https://spotifyapi.caliphdev.com/api/download/track?url=${encodeURIComponent(spotifyTrack.url)}`,
+      ,
 
     ];
 
