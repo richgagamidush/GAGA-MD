@@ -1,5 +1,5 @@
 
-const { keith } = require('../keizzah/keith');
+const { zokou } = require("../framework/zokou");
 const axios = require("axios");
 const { getytlink, ytdwn } = require("../keizzah/ytdl-core");
 const yts = require("yt-search");
@@ -46,7 +46,7 @@ keith({
       searchMessage += `*┃Comments*: ${track.comments || 0}\n`;
       searchMessage += `*┃Shares*: ${track.share || 0}\n`;
       searchMessage += `*┃Download Count*: ${track.download || 0}\n`;
-      searchMessage += `───────────────────◆\n\n`;
+      searchMessage += `───────────────────◆\n\n> Genarated by Gaga md`;
     });
 
     // Determine the thumbnail URL
@@ -63,8 +63,8 @@ keith({
             showAdAttribution: true,
             title: conf.BOT,
             body: conf.OWNER_NAME,
-            thumbnailUrl: thumbnailUrl,
-            sourceUrl: conf.GURL,
+            thumbnailUrl: "https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F",
+            sourceUrl: "https://files.catbox.moe/0zqr00.jpg",
             mediaType: 1,
             renderLargerThumbnail: true,
           },
@@ -113,7 +113,7 @@ keith({
       searchMessage += `*┃Profile*: ${track.profile || "Unknown"}\n`;
       searchMessage += `*┃Post*: ${track.post}\n`;  // The text of the tweet
       searchMessage += `*┃User Link*: ${track.user_link}\n`;  // Link to the user's profile
-      searchMessage += `───────────────────◆\n\n`;
+      searchMessage += `───────────────────◆\n\n> Genarated by Gaga md`;
     });
 
     // Determine the thumbnail URL
@@ -130,8 +130,8 @@ keith({
             showAdAttribution: true,
             title: conf.BOT,
             body: conf.OWNER_NAME,
-            thumbnailUrl: thumbnailUrl,
-            sourceUrl: conf.GURL,
+            thumbnailUrl: "https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F",
+            sourceUrl: "https://files.catbox.moe/0zqr00.jpg",
             mediaType: 1,
             renderLargerThumbnail: true,
           },
