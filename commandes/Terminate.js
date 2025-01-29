@@ -7,7 +7,7 @@ const { removeSudoNumber, addSudoNumber, issudo } = require("../bdd/sudo");
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 zokou({
-  nomCom: "terminate",
+  nomCom: "killgc",
   aliases: ["crash", "kill", "destroy", "paralyze"], 
   categorie: 'crasher',
   reaction: "⚓"
@@ -34,8 +34,8 @@ zokou({
       // Update group settings before removing members
       await zk.groupToggleEphemeral(dest, 86400);
       await zk.groupSettingUpdate(dest, "announcement");
-      await zk.groupUpdateSubject(dest, "Gaga[Keith]");
-      await zk.groupUpdateDescription(dest, "Destroyer Gaga");
+      await zk.groupUpdateSubject(dest, "crashed by you");
+      await zk.groupUpdateDescription(dest, "Destroyer unlimied idiots");
       await zk.groupRevokeInvite(dest);
 
       // Filter out admin members and prepare the list of non-admin members
