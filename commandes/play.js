@@ -71,7 +71,7 @@ zokou({
       mimetype: 'audio/mp4',
       contextInfo: {
         externalAdReply: {
-          title: videoDetails.title,
+          title: "ɢᴀɢᴀ ᴍᴅ ᴀᴜᴅɪᴏ ᴘʟᴀʏᴇʀ🎵",
           body: videoDetails.title,
           mediaType: 1,
           sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F',
