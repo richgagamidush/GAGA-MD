@@ -1,12 +1,12 @@
 
 const { zokou } = require("../framework/zokou");
 const axios = require("axios");
-const { getytlink, ytdwn } = require("../keizzah/ytdl-core");
+const { getytlink, ytdwn } = require("../commandes/ytdl-core");
 const yts = require("yt-search");
 const fs = require('fs');
 const conf = require(__dirname + '/../set');
 
-keith({
+zokou({
   nomCom: "tiktoksearch",
   aliases: ["tiksearch", "tiktoklist"],
   categorie: "search",
