@@ -1,5 +1,5 @@
 
-const { keith } = require('../keizzah/keith');
+const { zokou } = require("../framework/zokou");
 const Heroku = require('heroku-client');
 const s = require("../set");
 const axios = require("axios");
@@ -39,11 +39,11 @@ async function loading(dest, zk) {
   }
 }
 
-keith({
+zokou({
   nomCom: "test",
   aliases: ["alive", "testing"],
   categorie: "system",
-  reaction: "⚔️"
+  reaction: "🤺"
 }, async (dest, zk, commandeOptions) => {
   const { ms } = commandeOptions;
 
@@ -96,8 +96,8 @@ keith({
 });
 
 
-keith({
-  nomCom: 'restart',
+zokou({
+  nomCom: 'reboot',
   aliases: ['reboot'],
   categorie: "system"
 }, async (chatId, zk, context) => {
@@ -128,7 +128,7 @@ keith({
 
 
 // Command to retrieve Heroku config vars
-keith({
+zokou({
   nomCom: 'allvar',
   categorie: "system"
 }, async (chatId, zk, context) => {
@@ -152,7 +152,7 @@ keith({
     // Fetch config vars from Heroku API
     const configVars = await heroku.get(baseURI);
 
-    let str = '*╭───༺All my Heroku vars༻────╮*\n\n';
+    let str = '*╭───All my Heroku vars────╮*\n\n';
     
     // Loop through the returned config vars and format them
     for (let key in configVars) {
@@ -171,7 +171,7 @@ keith({
 });
 
 // Command to set a Heroku config var
-keith({
+zokou({
   nomCom: 'setvar',
   categorie: "system"
 }, async (chatId, zk, context) => {
@@ -213,7 +213,7 @@ keith({
   }
 });
 
-keith({
+zokou({
   nomCom: "shell",
   aliases: ["getcmd", "cmd"],
   reaction: '⚔️',
@@ -252,9 +252,9 @@ keith({
   });
 });
 
-keith(
+zokou(
   {
-    nomCom: 'ping',
+    nomCom: 'ping2',
     aliases: ['speed', 'latency'],
     desc: 'To check bot response time',
     categorie: 'system', // Fixed the typo here (Categorie -> categorie)
@@ -298,12 +298,12 @@ function react(dest, zk, msg, reaction) {
   zk.sendMessage(dest, { react: { text: reaction, key: msg.key } });
 }
 
-keith({
+zokou({
   nomCom: 'uptime',
   aliases: ['runtime', 'running'],
   desc: 'To check runtime',
   categorie: 'system', // Fixed the typo here (Categorie -> categorie)
-  reaction: '⚔️',
+  reaction: '🚀',
   fromMe: true, // Removed quotes to make it a boolean
 }, async (dest, zk, commandeOptions) => {
   const { ms, arg, repondre } = commandeOptions;
@@ -338,7 +338,7 @@ function react(dest, zk, msg, reaction) {
 }
 
 
-keith({
+zokou({
   nomCom: 'update',
   aliases: ['redeploy', 'sync'],
   categorie: "system"
@@ -347,7 +347,7 @@ keith({
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner 💀*");
+    return repondre("*This command can only be used by Gaga or Gaga md owner*");
   }
 
   // Ensure Heroku app name and API key are set
@@ -367,7 +367,7 @@ keith({
         `https://api.heroku.com/apps/${herokuAppName}/builds`,
         {
           source_blob: {
-            url: "https://github.com/Keithkeizzah/ALPHA-MD/tarball/main",
+            url: "https://github.com/richgagamidush/GAGA-MD/tarball/main",
           },
         },
         {
@@ -393,7 +393,7 @@ keith({
   redeployApp();
 });
 
-keith({
+zokou({
   nomCom: "fetch",
   aliases: ["get", "find"],
   categorie: "system",
