@@ -36,7 +36,7 @@ zokou({
     'vcard': "BEGIN:VCARD\nVERSION:3.0\nFN:G \nORG:BELTAH Nexus;\nTEL;type=CELL;type=VOICE;waid=254114141192:254737681758 \nEND:VCARD"
   };
   await _0x41d5d3.sendMessage(_0x4cfdc6, {
-    'text': "GAGA MD speed",
+    'text': "𝗚𝗔𝗚𝗔 𝗠𝗗 𝗦𝗣𝗘𝗘𝗗",
     'contextInfo': _0x41d2b1,
     'contacts': {
       'displayName': "GAGA MD Verified Contact",
@@ -62,7 +62,7 @@ zokou({
   const _0xae590 = {
     'externalAdReply': {
       'title': "GAGA SETTINGS",
-      'body': "👻 ʙᴇʟᴛᴀʜ ᴛᴇᴄʜ ʙᴏᴛ ɴᴇᴠᴇʀ sʟᴇᴇᴘs 👻",
+      'body': " ʙᴇʟᴛᴀʜ ᴛᴇᴄʜ ʙᴏᴛ ɴᴇᴠᴇʀ sʟᴇᴇᴘs 👻",
       'sourceUrl': "https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F",
       'thumbnailUrl': "https://files.catbox.moe/0zqr00.jpg",
       'mediaType': 0x1,
@@ -74,7 +74,7 @@ zokou({
     'vcard': "BEGIN:VCARD\nVERSION:3.0\nFN:BELTAH XBOT\nORG: BELTAH XBOT Nexus;\nTEL;type=CELL;type=VOICE;waid=254114141192 :254737681758\nEND:VCARD"
   };
   await _0x161605.sendMessage(_0x205206, {
-    'text': "Gaga md uptime :" + _0x2f3abc,
+    'text': "𝗚𝗔𝗚𝗔 𝗠𝗗 :" + _0x2f3abc,
     'contextInfo': _0xae590,
     'contacts': {
       'displayName': "GAGA TECH Verified Contact",
