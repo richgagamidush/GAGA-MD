@@ -81,7 +81,7 @@ zokou({
     fileName: 'shizo',
     contextInfo: {
       externalAdReply: {
-        title: '𝗜 𝗔𝗠 𝗔𝗟𝗜𝗩𝗘 𝗠𝗢𝗧𝗛𝗘𝗥𝗙𝗨𝗖𝗞𝗘𝗥',
+        title: 'GAGA MD BOT IS ALIVE',
         body: conf.OWNER_NAME,
         thumbnailUrl: conf.URL,
         sourceUrl: conf.GURL, // Corrected variable name
@@ -394,10 +394,10 @@ zokou({
 });
 
 zokou({
-  nomCom: "fetch",
+  nomCom: "find",
   aliases: ["get", "find"],
   categorie: "system",
-  reaction: '🛄',
+  reaction: '',
 }, async (sender, zk, context) => {
   const { repondre: sendResponse, arg: args } = context;
   const urlInput = args.join(" ");
