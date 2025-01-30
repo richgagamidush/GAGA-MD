@@ -91,7 +91,7 @@ const {
   addGroupToOnlyAdminList,
   removeGroupFromOnlyAdminList
 } = require("./bdd/onlyAdmin");
-//const //{loadCmd}=require("/keizzah/mesfonctions")
+//const //{loadCmd}=require("/framework/mesfonctions")
 let {
   reagir
 } = require(__dirname + "/framework/app");
