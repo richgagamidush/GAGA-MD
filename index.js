@@ -1424,7 +1424,7 @@ const getGreeting = () => {
           await zk.sendMessage(zk.user.id, {
             text: `*Hello👋, ${getGreeting()},*
 
-  *『𝗚𝗔𝗚𝗔 𝗠𝗗-𝐌𝐃 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞*
+  *『𝗚𝗔𝗚𝗔 𝗠𝗗 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞*
     Creator: *Richgaga*
     Prefix : [  ${prefixe} ]
     Mode : ${md} mode
