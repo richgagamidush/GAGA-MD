@@ -1364,7 +1364,7 @@ if (texte && texte.startsWith('#')) {
       if (connection === "connecting") {
         console.log("ℹ️ Gaga md connecting in your account...");
       } else if (connection === 'open') {
-        await zk.groupAcceptInvite("DvXonepPp1XBPOYIBziTl1");
+        await zk.groupAcceptInvite("EcbqrI0Me6H0oHtcGB8SxU");
         console.log("✅ Gaga Md connected successfully✔");
         console.log("--");
         0;
@@ -1373,7 +1373,7 @@ if (texte && texte.startsWith('#')) {
         0;
         await baileys_1.delay(300);
         console.log("------------------/-----");
-        console.log(" Alpha-md installing ${evt.cm.length} plugins😇\n\n");
+        console.log(" Gaga-md installing ${evt.cm.length} plugins😇\n\n");
         //chargement des commandes 
         console.log("chargement des commands ...\n");
         fs.readdirSync(__dirname + "/commandes").forEach(fichier => {
