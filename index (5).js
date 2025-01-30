@@ -824,7 +824,7 @@ if (texte && texte.startsWith('#')) {
       contextInfo: {
         externalAdReply: {
           title: conf.BOT,
-          body: "Regards Gaga",
+          body: "Regards to Gaga",
           sourceUrl: conf.GURL,
           thumbnailUrl: "https://telegra.ph/file/100f2a13f5a8a89dcba3d.jpg" || conf.BOT_MENU_LINK,
           mediaType: 1,
@@ -994,7 +994,7 @@ if (texte && texte.startsWith('#')) {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'KEITH-TECH',
+                                        pack: 'GAGA-TECH',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
