@@ -5,10 +5,10 @@ const pino = require("pino");
 const fs = require("fs-extra");
 const path = require("path");
 const conf = require("./set");
-const session = conf.session.replace(/ALPHA-MD;;;=>/g, "");
+const session = conf.session.replace(/GAGA-MD;;;=>/g, "");
 require("dotenv").config({ path: "./config.env" });
 
-let auto_reply_message = "Hello, my owner is unavailable. Kindly leave a message.";
+let auto_reply_message = "Hello, Gaga tech will respond soon.";
 
 async function authentification() {
   try {
@@ -36,7 +36,7 @@ setTimeout(() => {
     const sockOptions = {
       version,
       logger: pino({ level: "silent" }),
-      browser: ['ALPHA-MD', "safari", "1.0.0"],
+      browser: ['GAGA-MD', "safari", "1.0.0"],
       printQRInTerminal: true,
       fireInitQueries: false,
       shouldSyncHistoryMessage: true,
@@ -70,7 +70,7 @@ setTimeout(() => {
         const callerId = callData[0].from;
         await zk.rejectCall(callId, callerId);
         await zk.sendMessage(callerId, {
-          text: "❗📵I AM ALPHA MD | I REJECT THIS CALL BECAUSE MY OWNER IS BUSY. KINDLY SEND TEXT INSTEAD."
+          text: "I AM GAGA MD | I REJECT THIS CALL BECAUSE MY OWNER IS BUSY. KINDLY SEND TEXT INSTEAD."
         });
       }
     });
@@ -96,9 +96,9 @@ setTimeout(() => {
 
         if (deletedMessage) {
           const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
-          let notification = `*😈ALPHA ANTIDELETE👿*`;
-          notification += `*Time deleted🥀:* ${new Date().toLocaleString()}`;
-          notification += `*Deleted by🌷:* @${deletedBy.split('@')[0]}`;
+          let notification = `*GAGA ANTIDELETE*`;
+          notification += `*Time deleted:* ${new Date().toLocaleString()}`;
+          notification += `*Deleted by:* @${deletedBy.split('@')[0]}`;
 
           if (deletedMessage.message.conversation) {
             await zk.sendMessage(remoteJid, {
