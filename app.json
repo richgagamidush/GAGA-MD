@@ -7,7 +7,7 @@
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://telegra.ph/file/b148f6ed21fa02ac5325b.jpg",
+  "logo": "https://files.catbox.moe/oznlsw.jpg",
   "repository": "https://github.com/richgagamidush/GAGA-MD",
   "succes_url": "/",
   "stack": "container",
@@ -49,7 +49,7 @@
     },
     "AUTO_STATUS_MSG": {
       "description": "type your genuine status message",
-      "value": "viewed ✅✅",
+      "value": "status viewed",
       "required": false
     },
     "AUTO_STATUS_REPLY": {
@@ -69,7 +69,7 @@
     },
     "BOT_MENU_LINK": {
       "description": "Add one or many links for your bot menu (e.g., url1,url2,url3)",
-      "value": "https://telegra.ph/file/967c663a5978c545f78d6.jpg",
+      "value": "https://files.catbox.moe/oznlsw.jpg",
       "required": true
     },
     "PUBLIC_MODE": {
