@@ -156,7 +156,7 @@ setTimeout(() => {
       zk.ev.on("messages.upsert", async (m) => {
         const { messages } = m;
         let emojis = [];
-        const emojiFilePath = path.resolve(__dirname, 'database', 'emojis.json');
+        const emojiFilePath = path.resolve(__dirname, 'bdd', 'emojis.json');
 
         try {
           const data = fs.readFileSync(emojiFilePath, 'utf8');
