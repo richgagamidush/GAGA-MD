@@ -99,7 +99,7 @@
     },
     "URL": {
       "description": "Insert your bot url to display your image link ",
-      "value": "",
+      "value": "https://files.catbox.moe/oznlsw.jpg",
       "required": false
     },
     "AUTO_READ_MESSAGES": {
