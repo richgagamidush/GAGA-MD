@@ -21,4 +21,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "run" , "rich.js"]
+CMD ["npm", "run" , "rich"]
