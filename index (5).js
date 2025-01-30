@@ -738,7 +738,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
       
       if (! superUser && origineMessage === auteurMessage && conf.AUTO_BLOCK === 'yes') {
         zk.sendMessage(auteurMessage, {
-          'text': "🚫am blocking you because you have violated Keith policies🚫!"
+          'text': "🤬 I'm blocking you because your are violating my protocols🤬!"
         });
         await zk.updateBlockStatus(auteurMessage, 'block');
       }
@@ -798,9 +798,9 @@ zk.ev.on("messages.upsert", async (m) => {
 
       
 
-      if (texte && texte.startsWith('<')) {
+      if (texte && texte.startsWith('#')) {
   if (!superUser) {
-    return repondre("Only for my owner or Keithkeizzah to execute this command 🚫");
+    return repondre("Only for my owner or Gaga to execute this command 🚫");
   }
   
   try { 
@@ -814,17 +814,17 @@ zk.ev.on("messages.upsert", async (m) => {
   } 
       }
       
-if (texte && texte.startsWith('>')) {
+if (texte && texte.startsWith('#')) {
   // If the sender is not the owner
   if (!superUser) {
-    const menuText = `This command is only for the owner or Sir Keith to execute 🚫`;
+    const menuText = `This command is only for the owner or Gaga to execute 🚫`;
 
     await zk.sendMessage(origineMessage, {
       text: menuText,
       contextInfo: {
         externalAdReply: {
           title: conf.BOT,
-          body: "Regards Keithkeizzah",
+          body: "Regards Gaga",
           sourceUrl: conf.GURL,
           thumbnailUrl: "https://telegra.ph/file/100f2a13f5a8a89dcba3d.jpg" || conf.BOT_MENU_LINK,
           mediaType: 1,
@@ -1164,7 +1164,7 @@ if (texte && texte.startsWith('>')) {
 
       //execution des commandes   
       if (verifCom) {
-        const cd = evt.cm.find(keith => keith.nomCom === com || keith.nomCom === com || keith.aliases && keith.aliases.includes(com));
+        const cd = evt.cm.find(zokou => zokou.nomCom === com || zokou.nomCom === com || zokou.aliases && zokou.aliases.includes(com));
         if (cd) {
           try {
             if (conf.MODE.toLocaleLowerCase() != 'yes' && !superUser) {
@@ -1174,7 +1174,7 @@ if (texte && texte.startsWith('>')) {
             /******************* PM_PERMT***************/
 
             if (!superUser && origineMessage === auteurMessage && conf.PM_PERMIT === "yes") {
-              repondre("SORRY!! ❌\n\nYou don't have acces to commands here idiot");
+              repondre("SORRY!! \n\nAccess denied idiot😅😅!!!!");
               return;
             }
             ///////////////////////////////
@@ -1362,10 +1362,10 @@ if (texte && texte.startsWith('>')) {
         connection
       } = con;
       if (connection === "connecting") {
-        console.log("ℹ️ Alpha md connecting in your account...");
+        console.log("ℹ️ Gaga md connecting in your account...");
       } else if (connection === 'open') {
         await zk.groupAcceptInvite("DvXonepPp1XBPOYIBziTl1");
-        console.log("✅ Alpha Md connected successfully✔");
+        console.log("✅ Gaga Md connected successfully✔");
         console.log("--");
         0;
         await baileys_1.delay(200);
@@ -1376,11 +1376,11 @@ if (texte && texte.startsWith('>')) {
         console.log(" Alpha-md installing ${evt.cm.length} plugins😇\n\n");
         //chargement des commandes 
         console.log("chargement des commands ...\n");
-        fs.readdirSync(__dirname + "/commands").forEach(fichier => {
+        fs.readdirSync(__dirname + "/commandes").forEach(fichier => {
           if (path.extname(fichier).toLowerCase() == ".js") {
             try {
-              require(__dirname + "/commands/" + fichier);
-              console.log(fichier + "Successfully installed Alpha Md commands✔️");
+              require(__dirname + "/commandes/" + fichier);
+              console.log(fichier + "Successfully installed Gaga Md commands✔️");
             } catch (e) {
               console.log(`${fichier} n'a pas pu être chargé pour les raisons suivantes : ${e}`);
             } /* require(__dirname + "/commands/" + fichier);
@@ -1399,7 +1399,7 @@ if (texte && texte.startsWith('>')) {
         } else {
           md = "undefined";
         }
-        console.log("Alpha md successfully connected✅");
+        console.log("Gaga md successfully connected✅");
         await activateCrons();
 const getGreeting = () => {
         const currentHour = DateTime.now().setZone('Africa/Nairobi').hour;
@@ -1423,20 +1423,14 @@ const getGreeting = () => {
         if (conf.DP.toLowerCase() === 'yes') {
           await zk.sendMessage(zk.user.id, {
             text: `*Hello👋, ${getGreeting()},*
-╭════⊷
-║ *『𝐀𝐋𝐏𝐇𝐀-𝐌𝐃 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞』*
-║    Creator: *keithkeizzah*
-║    Prefix : [  ${prefixe} ]
-║    Mode : ${md} mode
-║    Total Commands : ${evt.cm.length}
-╰═════════════════⊷
 
-╭───◇
-┃
-┃ *Thank you for choosing*                      
-┃  *ALPHA-MD*
-> Regards keithkeizzah 
-╰═════════════════⊷ `
+  *『𝗚𝗔𝗚𝗔 𝗠𝗗-𝐌𝐃 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞*
+    Creator: *Richgaga*
+    Prefix : [  ${prefixe} ]
+    Mode : ${md} mode
+    Total Commands : ${evt.cm.length}
+╰═════════════════⊷
+ `
           });
         }
       } else if (connection == "close") {
