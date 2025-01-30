@@ -21,4 +21,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "run" , "gaga.js"]
+CMD ["npm", "run" , "index.js"]
