@@ -98,7 +98,7 @@ zokou({
   }
 });
 
-zomou({
+zokou({
   nomCom: 'readstatus',
   categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
@@ -140,13 +140,13 @@ zomou({
 });
 keith({
   nomCom: 'antidelete',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to the bot owner or Gaga.* 💀,,idiot");
   }
 
   // Validate user input and respond accordingly
@@ -179,15 +179,15 @@ keith({
   }
 });
 
-keith({
+zokou({
   nomCom: 'downloadstatus',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to the Gaga owner or Gaga md owner.");
   }
 
   // Validate user input and respond accordingly
@@ -220,15 +220,15 @@ keith({
   }
 });
 
-keith({
+zokou({
   nomCom: 'startmessage',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to the Gaga or Gaga md owner.");
   }
 
   // Validate user input and respond accordingly
@@ -261,15 +261,15 @@ keith({
   }
 });
 
-keith({
+zokou({
   nomCom: 'readmessage',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to the Gaga or Gaga md owner.");
   }
 
   // Validate user input and respond accordingly
@@ -302,15 +302,15 @@ keith({
   }
 });
 
-keith({
+zokou({
   nomCom: 'pm-permit',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to the Gaga  or Gaga md owner.");
   }
 
   // Validate user input and respond accordingly
@@ -342,15 +342,15 @@ keith({
     await zk.sendMessage(chatId, { text: 'Error processing your request.' }, { quoted: ms });
   }
 });
-keith({
+zokou({
   nomCom: 'chatbot',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to the Gaga or Gaga md owner.");
   }
 
   // Validate user input and respond accordingly
@@ -382,15 +382,15 @@ keith({
     await zk.sendMessage(chatId, { text: 'Error processing your request.' }, { quoted: ms });
   }
 });
-keith({
+zokou({
   nomCom: 'greet',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to Gaga or Gaga md owner");
   }
 
   // Validate user input and respond accordingly
@@ -423,15 +423,15 @@ keith({
   }
 });
 
-keith({
+zokou({
   nomCom: 'antivv',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to the Gaga or Gaga md owner");
   }
 
   // Validate user input and respond accordingly
@@ -464,15 +464,15 @@ keith({
   }
 });
 
-keith({
+zokou({
   nomCom: 'publicmode',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to Gaga or Gaga md owner");
   }
 
   // Validate user input and respond accordingly
@@ -505,15 +505,15 @@ keith({
   }
 });
 
-keith({
+zokou({
   nomCom: 'autorecord',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to Gaga or Gaga md owner");
   }
 
   // Validate user input and respond accordingly
