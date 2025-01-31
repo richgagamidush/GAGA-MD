@@ -1,9 +1,9 @@
-const { keith } = require("../keizzah/keith");
+const { zokou } = require("../framework/zokou");
 
 keith({
-  nomCom: "blocklist",
+  nomCom: "blacklist",
   aliases: ["listblock", "blacklist"],
-  reaction: '⚔️',
+  reaction: '🥅',
   categorie: "search"
 }, async (dest, zk, commandeOptions) => {
   const { repondre } = commandeOptions;
