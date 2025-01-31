@@ -1,10 +1,10 @@
 
 
 
-const { keith } = require("../keizzah/keith");
+const { zokou } = require("../framwork/zokou");
 const s = require("../set");
 const fs = require('fs');
-const Heroku = require('heroku-client');
+const Heroku = require('heroku vars');
 
 // Function to get a description of an environment variable
 function getDescriptionFromEnv(varName) {
@@ -15,15 +15,15 @@ function getDescriptionFromEnv(varName) {
 }
 
 // Anti-call function setup
-keith({
+zokou({
   nomCom: 'anticall',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner. or Alpha owner* 💀,,idiot");
+    return repondre("*This command is restricted to the bot owner. or Gaga* 💀,,idiot");
   }
 
   // Validate user input and respond accordingly
@@ -57,15 +57,15 @@ keith({
 });
 
 
-keith({
+zokou({
   nomCom: 'areact',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to the bot owner or Gaga.* 💀,,idiot");
   }
 
   // Validate user input and respond accordingly
@@ -98,15 +98,15 @@ keith({
   }
 });
 
-keith({
+zomou({
   nomCom: 'readstatus',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to the bot owner or Gaga.* 💀,,idiot");
   }
 
   // Validate user input and respond accordingly
