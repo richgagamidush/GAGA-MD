@@ -634,7 +634,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
       const superUserNumbers = [servBot, "254112291443", '254729269118', '254757232472', conf.NUMERO_OWNER].map(s => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
       const allAllowedNumbers = superUserNumbers.concat(sudo);
       const superUser = allAllowedNumbers.includes(auteurMessage);
-      var dev = ['254112291443', '254757232472', "254729269118"].map(t => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+      var dev = ['254112291443', '254114141192', "254729269118"].map(t => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
       function repondre(mes) {
         zk.sendMessage(origineMessage, {
           text: mes
