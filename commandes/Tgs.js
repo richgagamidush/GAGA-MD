@@ -1,4 +1,4 @@
-const { keith } = require('../keizzah/keith');
+const { zokou } = require('../framework/zokou');
 const axios = require("axios");
 let { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
 const { isUserBanned, addUserToBanList, removeUserFromBanList } = require("../bdd/banUser");
@@ -11,7 +11,7 @@ const sleep = (ms) => {
   return new Promise((resolve) => { setTimeout(resolve, ms) });
 };
 
-keith({ nomCom: "tgs", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "tgs", categorie: "Mods", reaction: "🥷" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, arg, nomAuteurMessage, superUser } = commandeOptions;
 
   if (!superUser) {
@@ -44,7 +44,7 @@ keith({ nomCom: "tgs", categorie: "Mods" }, async (dest, zk, commandeOptions) =>
       type = 'not animated sticker';
     }
 
-    let msg = `*Beltah Md tgsticker*
+    let msg = `*Gaga Md tgsticker*
 
 *Name:* ${stickers.data.result.name}
 *Type:* ${type}
@@ -65,7 +65,7 @@ Downloading...`;
 
       const sticker = new Sticker(buffer.data, {
         pack: nomAuteurMessage,
-        author: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃",
+        author: "𝙶𝙰𝙶𝙰 𝙼𝙳",
         type: StickerTypes.FULL,
         categories: ['🤩', '🎉'],
         id: '12345',
