@@ -1,9 +1,9 @@
 const { zokou } = require("../framework/zokou");
 
-keith({
+zokou({
   nomCom: "blacklist",
   aliases: ["listblock", "blacklist"],
-  reaction: '🥅',
+  reaction: '🚇',
   categorie: "search"
 }, async (dest, zk, commandeOptions) => {
   const { repondre } = commandeOptions;
