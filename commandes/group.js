@@ -1,15 +1,15 @@
-const { keith } = require("../keizzah/keith");
+const { zokou } = require("../framework/zokou");
 const { downloadMediaMessage, downloadContentFromMessage } = require("@whiskeysockets/baileys");
 const { exec } = require('child_process');
 const { writeFile } = require("fs/promises");
 const fs = require('fs-extra');
 const moment = require("moment-timezone");
 
-keith({
+zokou({
   nomCom: 'broadcast',
   aliase: 'spread',
   categorie: "Group",
-  reaction: '⚪'
+  reaction: '🔊'
 }, async (bot, client, context) => {
   const { arg, repondre, superUser, nomAuteurMessage } = context;
 
@@ -23,12 +23,12 @@ keith({
 
   const groups = await client.groupFetchAllParticipating();
   const groupIds = Object.values(groups).map(group => group.id);
-  await repondre("*BELTAH-MD is sending your message to all groups ,,,💀*...");
+  await repondre("*GAGA-MD is sending your message to all groups ,,,💀*...");
 
-  const broadcastMessage = `*🌟𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓🌟*\n\n🀄 Message: ${arg.join(" ")}\n\n🗣️ Author: ${nomAuteurMessage}`;
+  const broadcastMessage = `*🥷 GAGA MD BROADCAST 🥷*\n\n🀄 Message: ${arg.join(" ")}\n\n🗣️ Author: ${nomAuteurMessage}`;
   for (let groupId of groupIds) {
     await client.sendMessage(groupId, {
-      image: { url: 'https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg' },
+      image: { url: 'https://files.catbox.moe/oznlsw.jpg' },
       caption: broadcastMessage
     });
   }
@@ -51,7 +51,7 @@ const handleDisapCommand = async (chatId, client, context, duration) => {
 };
 
 // Disappearing Messages Off Command
-keith({
+zokou({
   nomCom: "disap-off",
   categorie: "Group",
   reaction: '㋛'
@@ -71,10 +71,10 @@ keith({
 });
 
 // Disappearing Messages Setup Command
-keith({
+zokou({
   nomCom: 'disap',
   categorie: "Group",
-  reaction: '❦'
+  reaction: '🚇'
 }, async (chatId, client, context) => {
   const { repondre, verifGroupe, verifAdmin } = context;
 
@@ -90,22 +90,22 @@ keith({
 });
 
 // Disappearing Messages Commands (1, 7, 90 days)
-keith({ nomCom: "disap1", categorie: "Group", reaction: '⚪' }, async (chatId, client, context) => {
+zokou({ nomCom: "disap1", categorie: "Group", reaction: '🥷' }, async (chatId, client, context) => {
   handleDisapCommand(chatId, client, context, 86400); // 1 day
 });
-keith({ nomCom: "disap7", categorie: 'Group', reaction: '⚪' }, async (chatId, client, context) => {
+zokou({ nomCom: "disap7", categorie: 'Group', reaction: '🥷' }, async (chatId, client, context) => {
   handleDisapCommand(chatId, client, context, 604800); // 7 days
 });
-keith({ nomCom: "disap90", categorie: 'Group', reaction: '⚪' }, async (chatId, client, context) => {
+zokou({ nomCom: "disap90", categorie: 'Group', reaction: '🥷' }, async (chatId, client, context) => {
   handleDisapCommand(chatId, client, context, 7776000); // 90 days
 });
 
 // Requests Command
-keith({
+zokou({
   nomCom: 'req',
   alias: 'requests',
   categorie: "Group",
-  reaction: "⚪"
+  reaction: "🥷"
 }, async (chatId, client, context) => {
   const { repondre, verifGroupe, verifAdmin } = context;
 
@@ -154,15 +154,15 @@ const handleRequestCommand = async (chatId, client, context, action) => {
 };
 
 // Approve Requests Command
-keith({
+zokou({
   nomCom: "approve",
   categorie: "Group",
-  reaction: "⚪"
+  reaction: "🥷"
 }, (chatId, client, context) => handleRequestCommand(chatId, client, context, "approve"));
 
 // Reject Requests Command
-keith({
+zokou({
   nomCom: "reject",
   categorie: "Group",
-  reaction: "⚪"
+  reaction: "🥷"
 }, (chatId, client, context) => handleRequestCommand(chatId, client, context, "reject"));
