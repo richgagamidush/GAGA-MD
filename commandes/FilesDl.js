@@ -1,15 +1,15 @@
 
-const { keith } = require('../keizzah/keith');
+const { zokou} = require('../framework/zokou');
 const axios = require('axios');
 const fs = require('fs-extra');
-const { mediafireDl } = require("../keizzah/dl/Function");
+const { mediafireDl } = require("../framework/dl/Function");
 const conf = require(__dirname + "/../set");
 
 
-keith({
+zokou({
   nomCom: 'apk',
   aliases: ['app', 'playstore'],
-  reaction: '✨',
+  reaction: '🥷',
   categorie: 'Download'
 }, async (groupId, client, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
@@ -52,9 +52,9 @@ keith({
           mediaUrl: thumb,
           mediaType: 1,
           thumbnailUrl: thumb,
-          title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 APK Download",
+          title: "𝙶𝙰𝙶𝙰 𝙼𝙳 APK Download",
           body: appDetails.BK9.name,
-          sourceUrl:  'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F' , // Using configured source URL
+          sourceUrl:  'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F' , // Using configured source URL
           showAdAttribution: true
         }
       }
@@ -68,7 +68,7 @@ keith({
 });
 
 // GitHub Clone Downloader
-keith({
+zokou({
   nomCom: "gitclone",
   aliases: ["zip", "clone"],
   categorie: "Download"
@@ -113,9 +113,9 @@ keith({
       contextInfo: {
         externalAdReply: {
           title: `${conf.BOT} GIT CLONE`,
-          body: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃",
-          thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg" ,
-          sourceUrl:  'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F' ,
+          body: "𝙶𝙰𝙶𝙰 𝙼𝙳",
+          thumbnailUrl: "https://files.catbox.moe/oznlsw.jpg" ,
+          sourceUrl:  'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F' ,
           mediaType: 1,
           showAdAttribution: true
         }
