@@ -2,10 +2,10 @@
 // Thanks chatgpt 😍😍
 // reach me before copy pasting it 254748387615
 
-const { keith } = require("../keizzah/keith");
+const { zokou } = require("../framework/zokou");
 const axios = require("axios");
 
-keith({ nomCom: "videologo", categorie: "modern-logo", reaction: "✋" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "videologo", categorie: "Logo-tech", reaction: "🥷" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, arg } = commandeOptions;
   const text = arg.join(" ");
 
@@ -28,10 +28,10 @@ keith({ nomCom: "videologo", categorie: "modern-logo", reaction: "✋" }, async 
     const contextInfo = {
       mentionedJid: [ms.sender], // Mention the sender
       externalAdReply: {
-        title: "𝗔𝗟𝗣𝗛𝗔 𝗠𝗗",
-        body: "Regards, Keithkeizzah",
-        thumbnailUrl: "https://files.catbox.moe/09c9r1.jpg",
-        sourceUrl: "https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47",
+        title: "GAGA MD",
+        body: "Regards, Gaga",
+        thumbnailUrl: "https://files.catbox.moe/oznlsw.jpg",
+        sourceUrl: "https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F",
         mediaType: 1,
         renderLargerThumbnail: true,
       },
@@ -80,7 +80,7 @@ keith({ nomCom: "videologo", categorie: "modern-logo", reaction: "✋" }, async 
           await zk.sendMessage(dest, {
             video: { url: logoUrl },
             mimetype: "video/mp4",
-            caption: `*Downloaded by Alpha Md*`,
+            caption: `*Downloaded by Gaga Md*`,
           }, { quoted: ms });
         }
       }
