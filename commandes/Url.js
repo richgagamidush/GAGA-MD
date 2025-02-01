@@ -1,4 +1,4 @@
-const { keith } = require("../keizzah/keith");
+const { zokou } = require("../framework/zokou");
 const { Catbox } = require("node-catbox");
 const fs = require('fs-extra');
 const { downloadAndSaveMediaMessage } = require('@whiskeysockets/baileys');
@@ -24,10 +24,10 @@ async function uploadToCatbox(filePath) {
 }
 
 // Command to upload image, video, or audio file
-keith({
+zokou({
   'nomCom': 'url',       // Command to trigger the function
   'categorie': "General", // Command category
-  'reaction': '👨🏿‍💻'    // Reaction to use on command
+  'reaction': '🥷'    // Reaction to use on command
 }, async (groupId, client, context) => {
   const { msgRepondu, repondre } = context;
 
