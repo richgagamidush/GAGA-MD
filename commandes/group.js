@@ -25,7 +25,7 @@ zokou({
   const groupIds = Object.values(groups).map(group => group.id);
   await repondre("*GAGA-MD is sending your message to all groups ,,,💀*...");
 
-  const broadcastMessage = `*🥷 GAGA MD BROADCAST 🥷*\n\n🀄 Message: ${arg.join(" ")}\n\n🗣️ Author: ${nomAuteurMessage}`;
+  const broadcastMessage = `*🥷 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 𝐁𝐘 𝐆𝐀𝐆𝐀 𝐌𝐃 🥷*\n\n🀄 Message: ${arg.join(" ")}\n\n🗣️ Author: ${nomAuteurMessage}`;
   for (let groupId of groupIds) {
     await client.sendMessage(groupId, {
       image: { url: 'https://files.catbox.moe/oznlsw.jpg' },
