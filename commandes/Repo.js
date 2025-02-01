@@ -1,6 +1,6 @@
 const axios = require("axios");
-const { keith } = require(__dirname + "/../keizzah/keith");
-const { format } = require(__dirname + "/../keizzah/mesfonctions");
+const { zokou } = require(__dirname + "/../framework/zokou");
+const { format } = require(__dirname + "/../framework/mesfonctions");
 const os = require('os');
 const moment = require("moment-timezone");
 const conf = require(__dirname + "/../set");
@@ -36,10 +36,10 @@ const fetchGitHubStats = async () => {
     }
 };
 
-keith({
+zokou({
     nomCom: "repo",
     aliases: ["script", "sc"],
-    reaction: '👻',
+    reaction: '🥷',
     nomFichier: __filename
 }, async (command, reply, context) => {
     const { repondre, auteurMessage, nomAuteurMessage } = context;
@@ -61,7 +61,7 @@ keith({
             const message = `
 *Hello 👋 ${nomAuteurMessage}* 
 ╭───────────────━⊷
-║ 👻 𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 𝐑𝐄𝐏𝐎 👻
+║ 🥷𝙶𝙰𝙶𝙰 𝙼𝙳🥷
 ╰───────────────━⊷
 ╭───────────────━⊷
 ║💡 *ɴᴀᴍᴇ:* ʙᴇʟᴛᴀʜ ᴍᴅ
@@ -73,21 +73,21 @@ keith({
 ╰───────────────━⊷
 ╭───────────────━⊷
 ║ ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ : ${releaseDate}
-║ ʀᴇᴘᴏ ʟɪɴᴋ:  github.com/Beltah254/X-BOT
+║ ʀᴇᴘᴏ ʟɪɴᴋ:  github.com/
 ╰───────────────━⊷
 
 _________________________________
-> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐁𝐞𝐥𝐭𝐚𝐡 𝐇𝐚𝐜𝐤𝐢𝐧𝐠 𝐓𝐞𝐚𝐦`;
+> ᴛʜᴀɴᴋs ғᴏʀ ᴄʜᴏᴏsɪɴɢ ɢᴀɢᴀ ᴍᴅ`;
 
             await reply.sendMessage(command, {
                 text: message,
                 contextInfo: {
                     mentionedJid: [auteurMessage],
                     externalAdReply: {
-                        title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃",
+                        title: "GAGA MD",
                         body: "Star 🌟 and fork repo to deploy" ,
-                        thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
-                        sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F' , // Fixed typo from 'cof.GURL' to 'conf.GURL'
+                        thumbnailUrl: "https://files.catbox.moe/oznlsw.jpg",
+                        sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F' , // Fixed typo from 'cof.GURL' to 'conf.GURL'
                         mediaType: 1,
                         renderLargerThumbnail: true
                     }
@@ -103,10 +103,10 @@ _________________________________
     }
 });
 
-    keith({
+    zokou({
     nomCom: "sc",
     aliases: ["script", "sc"],
-    reaction: '👻',
+    reaction: '🥷',
     nomFichier: __filename
 }, async (command, reply, context) => {
     const { repondre, auteurMessage, nomAuteurMessage } = context;
@@ -128,7 +128,7 @@ _________________________________
             const message = `
 *Hello 👋 ${nomAuteurMessage}*
 ╭───────────────━⊷
-║ 👻 𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 𝐑𝐄𝐏𝐎 👻
+║ 🥷 𝙶𝙰𝙶𝙰 𝙼𝙳 🥷
 ╰───────────────━⊷
 ╭───────────────━⊷
 ║💡 *ɴᴀᴍᴇ:* ʙᴇʟᴛᴀʜ ᴍᴅ
@@ -140,21 +140,21 @@ _________________________________
 ╰───────────────━⊷
 ╭───────────────━⊷
 ║ ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ : ${releaseDate}
-║ ʀᴇᴘᴏ ʟɪɴᴋ:  github.com/Beltah254/X-BOT
+║ ʀᴇᴘᴏ ʟɪɴᴋ:  github.com
 ╰───────────────━⊷
 
 _________________________________
-> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐁𝐞𝐥𝐭𝐚𝐡 𝐇𝐚𝐜𝐤𝐢𝐧𝐠 𝐓𝐞𝐚𝐦`;
+> ᴛʜᴀɴᴋs ғᴏʀ ᴄʜᴏᴏsɪɴɢ ɢᴀɢᴀ ᴍᴅ`;
 
             await reply.sendMessage(command, {
                 text: message,
                 contextInfo: {
                     mentionedJid: [auteurMessage],
                     externalAdReply: {
-                        title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃",
+                        title: "𝙶𝙰𝙶𝙰 𝙼𝙳",
                         body: "Star 🌟 and fork repo to deploy" ,
-                        thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
-                        sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F' , // Fixed typo from 'cof.GURL' to 'conf.GURL'
+                        thumbnailUrl: "https://files.catbox.moe/oznlsw.jpg",
+                        sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F' , // Fixed typo from 'cof.GURL' to 'conf.GURL'
                         mediaType: 1,
                         renderLargerThumbnail: true
                     }
@@ -171,10 +171,10 @@ _________________________________
 });
 
 
-keith({
+zokou({
     nomCom: "script",
     aliases: ["script", "sc"],
-    reaction: '👻',
+    reaction: '🥷',
     nomFichier: __filename
 }, async (command, reply, context) => {
     const { repondre, auteurMessage, nomAuteurMessage } = context;
@@ -196,7 +196,7 @@ keith({
             const message = `
 *Hello 👋 ${nomAuteurMessage}*
 ╭───────────────━⊷
-║ 👻 𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 𝐑𝐄𝐏𝐎 👻
+║  🥷 𝙶𝙰𝙶𝙰 𝙼𝙳 🥷
 ╰───────────────━⊷
 ╭───────────────━⊷
 ║💡 *ɴᴀᴍᴇ:* ʙᴇʟᴛᴀʜ ᴍᴅ
@@ -208,21 +208,21 @@ keith({
 ╰───────────────━⊷
 ╭───────────────━⊷
 ║ ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ : ${releaseDate}
-║ ʀᴇᴘᴏ ʟɪɴᴋ:  github.com/Beltah254/X-BOT
+║ ʀᴇᴘᴏ ʟɪɴᴋ:  github.com/
 ╰───────────────━⊷
 
 _________________________________
-> 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐁𝐞𝐥𝐭𝐚𝐡 𝐇𝐚𝐜𝐤𝐢𝐧𝐠 𝐓𝐞𝐚𝐦`;
+> ᴛʜᴀɴᴋs ғᴏʀ ᴄʜᴏᴏsɪɴɢ ɢᴀɢᴀ ᴍᴅ`;
 
             await reply.sendMessage(command, {
                 text: message,
                 contextInfo: {
                     mentionedJid: [auteurMessage],
                     externalAdReply: {
-                        title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃",
+                        title: "𝙶𝙰𝙶𝙰 𝙼𝙳",
                         body: "Star 🌟 and fork repo to deploy",
-                        thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
-                        sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F' , // Fixed typo from 'cof.GURL' to 'conf.GURL'
+                        thumbnailUrl: "https://files.catbox.moe/oznlsw.jpg",
+                        sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F' , // Fixed typo from 'cof.GURL' to 'conf.GURL'
                         mediaType: 1,
                         renderLargerThumbnail: true
                     }
