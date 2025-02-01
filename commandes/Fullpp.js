@@ -1,12 +1,12 @@
-const { keith } = require("../keizzah/keith");
-const { generateProfilePicture } = require("../keizzah/dl/Function");
+const { zokou } = require("../framework/zokou");
+const { generateProfilePicture } = require("../framework/dl/Function");
 const { S_WHATSAPP_NET } = require('@whiskeysockets/baileys');
 const fs = require("fs");
 
-keith({
-  nomCom: "fullpp",
+zokou({
+  nomCom: "setpp",
   aliases: ["updatepp", "ppfull"],
-  reaction: '👻',
+  reaction: '🥷',
   categorie: "search"
 }, async (dest, zk, commandeOptions) => {
   const { repondre, msgRepondu, auteurMessage } = commandeOptions;
@@ -45,7 +45,7 @@ keith({
       });
 
       fs.unlinkSync(medis);
-      repondre("Bot Profile Picture Updated");
+      repondre("Profile picture successfully updated by Gaga md");
     } catch (error) {
       repondre("An error occurred while updating bot profile photo: " + error);
     }
