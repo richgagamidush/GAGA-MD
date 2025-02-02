@@ -158,12 +158,12 @@ zokou({ nomCom: "list", aliases: ["liste", "helplist", "commandlist"], categorie
     let commandIndex = 1;
 
     for (const category of sortedCategories) {
-        commandsList += `\n*╭─────「 ${toFancyUppercaseFont(category)} 」──┈⊷*\n│◦│╭───────────────`;
+        commandsList += `\n*╭─────「 ${toFancyUppercaseFont(category)} 」──┈*\n│◦│╭───────────────`;
         const sortedCommands = categorizedCommands[category].sort();
         for (const command of sortedCommands) {
-            commandsList += `\n│◦│ ${commandIndex++}. ${toFancyLowercaseFont(command)}`;
+            commandsList += `\n│🚇│ ${commandIndex++}. ${toFancyLowercaseFont(command)}`;
         }
-        commandsList += "\n│◦╰─────────────\n╰──────────────┈⊷\n";
+        commandsList += "\n│◦╰─────────────\n╰──────────────┈\n";
     }
 
     commandsList += readMore + "\n> REGARDS TO RICH GAGA MIDUSH\n";
@@ -177,7 +177,7 @@ zokou({ nomCom: "list", aliases: ["liste", "helplist", "commandlist"], categorie
                 externalAdReply: {
                     title: "GAGA MD" ,
                     body: "REGARDS TO RICH-GAGA-MIDUSH" ,
-                    thumbnailUrl: "" ,
+                    thumbnailUrl: "https://files.catbox.moe/oznlsw.jpg" ,
                     sourceUrl:'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F' ,
                     mediaType: 1,
                     renderLargerThumbnail: true
