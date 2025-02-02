@@ -668,15 +668,15 @@ zokou({
     await zk.sendMessage(chatId, { text: 'Error processing your request.' }, { quoted: ms });
   }
 });
-keith({
+zokou({
   nomCom: 'autolikestatus',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to Gaga or Gaga owner.* 💀,,idiot");
   }
 
   // Validate user input and respond accordingly
@@ -708,15 +708,15 @@ keith({
     await zk.sendMessage(chatId, { text: 'Error processing your request.' }, { quoted: ms });
   }
 });
-keith({
+zokou({
   nomCom: 'chatbot',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or Alpha owner.* 💀,,idiot");
+    return repondre("*This command is restricted to Gaga or Gaga md owner");
   }
 
   // Validate user input and respond accordingly
@@ -749,9 +749,9 @@ keith({
   }
 });
 
-keith({
+zokou({
   nomCom: 'settings',
-  categorie: "HEROKU-CLIENT"
+  categorie: "HEROKU-VARS"
 }, async (chatId, messagingService, context) => {
   const { ms, repondre, superUser, auteurMessage } = context;
   
@@ -774,7 +774,7 @@ keith({
     { nom: "CHAT_BOT", choix: ['on', 'off'] }
   ];
 
-  let settingsMenu = "╭──────༺♡༻──────╮\n  Alpha-Md Settings\n╰──────༺♡༻──────╯\n\n";
+  let settingsMenu = "╭──────༺♡༻──────╮\n  Gaga-Md Settings\n╰──────༺♡༻──────╯\n\n";
   settingsOptions.forEach((option, index) => {
     settingsMenu += `${index + 1}- *${option.nom}*\n`;
   });
@@ -827,9 +827,9 @@ keith({
 
 // Function to change Heroku environment variables
 function changevars(commandName, varName) {
-  keith({
+  zomou({
     nomCom: commandName,
-    categorie: 'HEROKU-CLIENT'
+    categorie: 'HEROKU-VARS'
   }, async (chatId, messagingService, context) => {
     const { arg, superUser, repondre } = context;
     
