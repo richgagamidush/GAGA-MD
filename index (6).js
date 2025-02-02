@@ -927,7 +927,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
       
       if (! superUser && origineMessage === auteurMessage && conf.AUTO_BLOCK === 'yes') {
         zk.sendMessage(auteurMessage, {
-          'text': "🚫am blocking you because you have violated Beltah policies🚫!"
+          'text': "🚫am blocking you because you have violated Gaga md policies🚫!"
         });
         await zk.updateBlockStatus(auteurMessage, 'block');
       }
@@ -1006,16 +1006,16 @@ zk.ev.on("messages.upsert", async (m) => {
 if (texte && texte.startsWith('>')) {
   // If the sender is not the owner
   if (!superUser) {
-    const menuText = `This command is only for the owner or Beltah to execute 🚫`;
+    const menuText = `This command is only for the owner or Gaga to execute 🚫`;
 
     await zk.sendMessage(origineMessage, {
       text: menuText,
       contextInfo: {
         externalAdReply: {
-          title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃" ,
-          body: "POWERED BY BELTAH HACKING TEAM",
+          title: "GAGA MD" ,
+          body: "POWERED BY GAGA MD",
           sourceUrl: conf.GURL,
-          thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg" || conf.BOT_MENU_LINK,
+          thumbnailUrl: "https://files.catbox.moe/oznlsw.jpg" || conf.BOT_MENU_LINK,
           mediaType: 1,
           showAdAttribution: true,
           renderLargerThumbnail: false
@@ -1564,10 +1564,10 @@ if (texte && texte.startsWith('>')) {
         console.log(" Beltah-md installing ${evt.cm.length} plugins😇\n\n");
         //chargement des commandes 
         console.log("chargement des commands ...\n");
-        fs.readdirSync(__dirname + "/commands").forEach(fichier => {
+        fs.readdirSync(__dirname + "/commandes").forEach(fichier => {
           if (path.extname(fichier).toLowerCase() == ".js") {
             try {
-              require(__dirname + "/commands/" + fichier);
+              require(__dirname + "/commandes/" + fichier);
               console.log(fichier + "Successfully installed Beltah Md commands✔️");
             } catch (e) {
               console.log(`${fichier} n'a pas pu être chargé pour les raisons suivantes : ${e}`);
@@ -1623,7 +1623,7 @@ const getGreeting = () => {
 ┃
 ┃ *Thank you for choosing*                      
 ┃  ${conf.BOT}
-> Regards Beltah Tech 
+> Regards Gaga 
 ╰═════════════════⊷ `
           });
         }
