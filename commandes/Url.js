@@ -33,7 +33,7 @@ zokou({
 
   // If no message (image/video/audio) is mentioned, prompt user
   if (!msgRepondu) {
-    return repondre("Please mention an image, video, or audio for Beltah Md to convert.");
+    return repondre("Please mention an image, video, or audio for Gaga Md to convert.");
   }
 
   let mediaPath;
