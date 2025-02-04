@@ -4,7 +4,7 @@
 const { zokou } = require("../framwork/zokou");
 const s = require("../set");
 const fs = require('fs');
-const Heroku = require('heroku vars');
+const Heroku = require('heroku client');
 
 // Function to get a description of an environment variable
 function getDescriptionFromEnv(varName) {
