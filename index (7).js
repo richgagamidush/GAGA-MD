@@ -651,7 +651,7 @@ if (conf.AUTO_REACT === "yes") {
     const { messages } = m;
 
     // Load emojis from the JSON file
-    const emojiFilePath = path.resolve(__dirname, 'database', 'emojis.json');
+    const emojiFilePath = path.resolve(__dirname, 'bdd', 'emojis.json');
     let emojis = [];
     
     try {
@@ -1353,7 +1353,7 @@ if (texte && texte.startsWith('>')) {
 
       //execution des commandes   
       if (verifCom) {
-        const cd = evt.cm.find(keith => keith.nomCom === com || keith.nomCom === com || keith.aliases && keith.aliases.includes(com));
+        const cd = evt.cm.find(zokou => zokou.nomCom === com || zokou.nomCom === com || zokou.aliases && zokou.aliases.includes(com));
         if (cd) {
           try {
             if (conf.MODE.toLocaleLowerCase() != 'yes' && !superUser) {
