@@ -1,10 +1,10 @@
-const { keith } = require("../keizzah/keith");
+const { zokou } = require("../framework/zokou");
 // const { getGroupe } = require("../bdd/groupe"); 
 const conf = require("../set");
 
-keith({
+zokou({
     nomCom: "opentime",
-    reaction: "🔖",
+    reaction: "🚇",
     categorie: "group"
 }, async (dest, zk, context) => {
     var { repondre, arg, verifGroupe, verifAdmin } = context;
@@ -43,9 +43,9 @@ keith({
     }
 });
 
-keith({
+zokou({
     nomCom: "closetime",
-    reaction: "🔖",
+    reaction: "🚇",
     categorie: "group"
 }, async (dest, zk, context) => {
     var { repondre, arg, verifGroupe, verifAdmin } = context;
