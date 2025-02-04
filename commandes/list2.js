@@ -190,9 +190,9 @@ zokou({ nomCom: "menu", aliases: ["liste", "helplist", "commandlist"], categorie
     }
 });
 
-keith({ nomCom: "list", aliases: ["liste", "helplist", "commandlist"], categorie: "SYSTEM" }, async (message, client, config) => {
+zokou({ nomCom: "dashboard", aliases: ["liste", "helplist", "commandlist"], categorie: "SYSTEM" }, async (message, client, config) => {
     const { ms, respond, prefix, nomAuteurMessage } = config;
-    const commands = require(__dirname + "/../keizzah/keith").cm;
+    const commands = require(__dirname + "/../framework/zokou").cm;
     const categorizedCommands = {};
     const mode = settings.MODE.toLowerCase() !== "public" ? "Private" : "Public";
 
@@ -240,20 +240,20 @@ keith({ nomCom: "list", aliases: ["liste", "helplist", "commandlist"], categorie
 
 `;
 
-    let commandsList = "*𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒*\n";
+    let commandsList = "*GAGA MD PLUGINS*\n";
     const sortedCategories = Object.keys(categorizedCommands).sort();
     let commandIndex = 1;
 
     for (const category of sortedCategories) {
-        commandsList += `\n*╭─────「 ${toFancyUppercaseFont(category)} 」──┈⊷*\n│◦│╭───────────────`;
+        commandsList += `\n*╭─────「 ${toFancyUppercaseFont(category)} 」──┈*\n│◦│╭───────────────`;
         const sortedCommands = categorizedCommands[category].sort();
         for (const command of sortedCommands) {
-            commandsList += `\n│◦│ ${commandIndex++}. ${toFancyLowercaseFont(command)}`;
+            commandsList += `\n│🚇│ ${commandIndex++}. ${toFancyLowercaseFont(command)}`;
         }
-        commandsList += "\n│◦╰─────────────\n╰──────────────┈⊷\n";
+        commandsList += "\n│◦╰─────────────\n╰──────────────┈\n";
     }
 
-    commandsList += readMore + "\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ\n";
+    commandsList += readMore + "\n> REGARDS TO RICH GAGA MIDUSH\n";
 
     try {
         const senderName = message.sender || message.from;
@@ -262,10 +262,10 @@ keith({ nomCom: "list", aliases: ["liste", "helplist", "commandlist"], categorie
             contextInfo: {
                 mentionedJid: [senderName],
                 externalAdReply: {
-                    title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃" ,
-                    body: "ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ" ,
-                    thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg" ,
-                    sourceUrl:'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F' ,
+                    title: "GAGA MD" ,
+                    body: "REGARDS TO RICH-GAGA-MIDUSH" ,
+                    thumbnailUrl: "https://files.catbox.moe/sfk02i.jpg" ,
+                    sourceUrl:'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F' ,
                     mediaType: 1,
                     renderLargerThumbnail: true
                 }
