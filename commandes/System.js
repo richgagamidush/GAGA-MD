@@ -367,7 +367,7 @@ zokou({
         `https://api.heroku.com/apps/${herokuAppName}/builds`,
         {
           source_blob: {
-            url: "https://github.com/richgagamidush/GAGA-MD/tarball/main",
+            url: "https://github.com/richgagamidush/GAGA-MD/tree/main",
           },
         },
         {
