@@ -1,14 +1,14 @@
 {
-  "name": "👻𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃👻",
-  "description": "BELTAH-MD is a multidevice WhatsApp bot built to make your WhatsApp enjoyable...",
+  "name": "GAGA MD",
+  "description": "GAGA-MD is a multidevice WhatsApp bot built to make your WhatsApp enjoyable...",
   "keywords": [
     "bot",
     "node",
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
-  "repository": "https://github.com/Beltahtechinfo/BELTAH-MD",
+  "logo": "https://files.catbox.moe/oznlsw.jpg",
+  "repository": "https://github.com/richgagamidush/GAGA-MD",
   "succes_url": "/",
   "stack": "container",
   "env": {
@@ -49,7 +49,7 @@
     },
     "AUTO_STATUS_MSG": {
       "description": "type your genuine status message",
-      "value": "viewed ✅✅",
+      "value": "viewed",
       "required": false
     },
     "AUTO_STATUS_REPLY": {
@@ -64,7 +64,7 @@
     },
     "BOT_NAME": {
       "description": "you must give a name for you bot uhh??!!",
-      "value": "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃",
+      "value": "GAGA MD",
       "required": true
     },
     "GROUP_CONTROL": {
@@ -99,7 +99,7 @@
     },
     "URL": {
       "description": "you must add your bot image url.Get your image url now and fill it here",
-      "value": "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
+      "value": "https://files.catbox.moe/oznlsw.jpg",
       "required": true
     },
     "AUTO_READ_MESSAGES": {
@@ -109,7 +109,7 @@
     },
     "NUMERO_OWNER": {
       "description": "Your phone number (exclude '+' and area code, e.g., '254796299159')",
-      "value": "254114141192",
+      "value": "254112291443",
       "required": false
     },
     "WARN_COUNT": {
