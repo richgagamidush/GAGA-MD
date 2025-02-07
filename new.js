@@ -75,7 +75,7 @@ const {
   atbverifierEtatJid,
   atbrecupererActionJid
 } = require("./bdd/antibot");
-let evt = require(__dirname + "/keizzah/keith");
+let evt = require(__dirname + "/framework/zokou");
 const {
   isUserBanned,
   addUserToBanList,
@@ -91,10 +91,10 @@ const {
   addGroupToOnlyAdminList,
   removeGroupFromOnlyAdminList
 } = require("./bdd/onlyAdmin");
-//const //{loadCmd}=require("/keizzah/mesfonctions")
+//const //{loadCmd}=require("/framework/mesfonctions")
 let {
   reagir
-} = require(__dirname + "/keizzah/app");
+} = require(__dirname + "/framework/app");
 var session = conf.session.replace(/ALPHA-MD;;;=>/g, "");
 const prefixe = conf.PREFIXE || [];
 
@@ -142,7 +142,7 @@ setTimeout(() => {
       logger: pino({
         level: "silent"
       }),
-      browser: ['BELTAH-MD', "safari", "1.0.0"],
+      browser: ['GAGA-MD', "safari", "1.0.0"],
       printQRInTerminal: true,
       fireInitQueries: false,
       shouldSyncHistoryMessage: true,
@@ -209,7 +209,7 @@ if (conf.AUTOBIO === 'yes') {
     setInterval(() => {
       const date = new Date();
       zk.updateProfileStatus(
-        `👻 𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 👻 is active: ${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi' })}.`
+        `🥷 GAGA MD 🥷 is active: ${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi' })}.`
       );
     }, 10 * 1000);
   }
@@ -1390,9 +1390,9 @@ if (texte && texte.startsWith('>')) {
         connection
       } = con;
       if (connection === "connecting") {
-        console.log("ℹ️ Beltah md connecting in your account...");
+        console.log("ℹ️ Gaga md connecting in your account...");
       } else if (connection === 'open') {
-         console.log("✅ Beltah Md connected successfully✔");
+         console.log("✅ Gaga Md connected successfully✔");
         console.log("--");
         0;
         await baileys_1.delay(200);
@@ -1400,14 +1400,14 @@ if (texte && texte.startsWith('>')) {
         0;
         await baileys_1.delay(300);
         console.log("------------------/-----");
-        console.log(" Beltah-md installing ${evt.cm.length} plugins😇\n\n");
+        console.log(" Gaga-md installing ${evt.cm.length} plugins😇\n\n");
         //chargement des commandes 
         console.log("chargement des commands ...\n");
-        fs.readdirSync(__dirname + "/commands").forEach(fichier => {
+        fs.readdirSync(__dirname + "/commandes").forEach(fichier => {
           if (path.extname(fichier).toLowerCase() == ".js") {
             try {
-              require(__dirname + "/commands/" + fichier);
-              console.log(fichier + "Successfully installed Beltah Md commands✔️");
+              require(__dirname + "/commandes/" + fichier);
+              console.log(fichier + "Successfully installed Gaga Md commands✔️");
             } catch (e) {
               console.log(`${fichier} n'a pas pu être chargé pour les raisons suivantes : ${e}`);
             } /* require(__dirname + "/commands/" + fichier);
@@ -1426,7 +1426,7 @@ if (texte && texte.startsWith('>')) {
         } else {
           md = "undefined";
         }
-        console.log("Beltah md successfully connected✅");
+        console.log("Gaga md successfully connected✅");
         await activateCrons();
 const getGreeting = () => {
         const currentHour = DateTime.now().setZone('Africa/Nairobi').hour;
