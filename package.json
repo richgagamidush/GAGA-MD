@@ -3,12 +3,12 @@
   "name": "GAGA-MD",
   "version": "2.0.0",
   "description": "",
-  "main": "imdex.js",
+  "main": "new.js",
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "node index.js", 
-    "zokou": "pm2 start index.js --attach --max-memory-restart 490M",
+    "s": "node new.js", 
+    "zokou": "pm2 start new.js --attach --max-memory-restart 490M",
     "rich": "pm2 start rich.js --attach",
     "c": "tsc"
     },
