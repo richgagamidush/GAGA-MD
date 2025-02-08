@@ -25,7 +25,7 @@ zokou({
         const phoneNumber = blockedUser.split('@')[0];
 
         // Add the blocked user's phone number to the message
-        jackhuh += `🗡️  +${phoneNumber}\n`;  // List the phone number
+        jackhuh += `🥷🥷  +${phoneNumber}\n`;  // List the phone number
       });
 
       // Wait for all the promises to complete
