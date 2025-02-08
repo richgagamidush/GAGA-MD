@@ -1,5 +1,5 @@
-const { keith } = require("../keizzah/keith");
-const { delay, loading, react } = require("../keizzah/utils");
+const { zokou } = require("../framework/zokou");
+const { delay, loading, react } = require("../framework/utils");
 const moment = require("moment-timezone");
 const conf = require("../set.js");
 const fs = require("fs");
@@ -10,13 +10,13 @@ const {
 } = require("@whiskeysockets/baileys");
 
 // bug database
-const { bugtext1 } = require("../keizzah/bugs/bugtext1");
-const { bugtext2 } = require("../keizzah/bugs/bugtext2");
-const { bugtext3 } = require("../keizzah/bugs/bugtext3");
-const { bugtext4 } = require("../keizzah/bugs/bugtext4");
-const { bugtext5 } = require("../keizzah/bugs/bugtext5");
-const { bugtext6 } = require("../keizzah/bugs/bugtext6");
-const { bugpdf } = require("../keizzah/bugs/bugpdf.js");
+const { bugtext1 } = require("../framework/bugs/bugtext1");
+const { bugtext2 } = require("../framework/bugs/bugtext2");
+const { bugtext3 } = require("../framework/bugs/bugtext3");
+const { bugtext4 } = require("../framework/bugs/bugtext4");
+const { bugtext5 } = require("../framework/bugs/bugtext5");
+const { bugtext6 } = require("../framework/bugs/bugtext6");
+const { bugpdf } = require("../framework/bugs/bugpdf.js");
 
 const category = "Bug-cmds";
 const reaction = "🤯";
@@ -115,7 +115,7 @@ async function sendbug(dest, zk, ms, repondre, amount, victims, bug) {
 // --cmds--
 
 // bug menu
-keith(
+zokou(
     {
         nomCom: "🐛",
         categorie: category,
@@ -173,7 +173,7 @@ ${timewisher(time)}
                                     thumbnailUrl: tumbUrl,
                                     previewType: "PHOTO",
                                     sourceUrl:
-                                        "https://whatsapp.com/channel/0029VaePv7T72WTq4R6Pxr0t",
+                                        "",
                                     mediaType: 1,
                                     renderLargerAbhinail: true
                                 }
@@ -188,7 +188,7 @@ ${timewisher(time)}
 );
 
 //bug
-keith(
+zokou(
     {
         nomCom: "bug",
         categorie: category,
@@ -229,7 +229,7 @@ keith(
 );
 
 //crash
-keith(
+zokou(
     {
         nomCom: "crash",
         categorie: category,
@@ -254,7 +254,7 @@ keith(
 );
 
 //loccrash
-keith(
+zokou(
     {
         nomCom: "loccrash",
         reaction: "\uD83D\uDD16",
@@ -286,7 +286,7 @@ keith(
 );
 
 //crashbug
-keith(
+zokou(
     {
         nomCom: "crashbug",
         categorie: category,
@@ -377,7 +377,7 @@ keith(
 );
 
 // amountbug
-keith(
+zokou(
     {
         nomCom: "amountbug",
         categorie: category,
@@ -434,7 +434,7 @@ keith(
 );
 
 //pmbug
-keith(
+zokou(
     {
         nomCom: "pmbug",
         categorie: category,
@@ -518,7 +518,7 @@ keith(
 );
 
 //delaybug
-keith(
+zokou(
     {
         nomCom: "delaybug",
         categorie: category,
@@ -602,7 +602,7 @@ keith(
 );
 
 //docubug
-keith(
+zokou(
     {
         nomCom: "docubug",
         categorie: category,
@@ -686,7 +686,7 @@ keith(
 );
 
 //unlimitedbug
-keith(
+zokou(
     {
         nomCom: "unlimitedbug",
         categorie: category,
@@ -770,7 +770,7 @@ keith(
 );
 
 //bombug
-keith(
+zokou(
     {
         nomCom: "bombug",
         categorie: category,
@@ -854,7 +854,7 @@ keith(
 );
 
 //lagbug
-keith(
+zokou(
     {
         nomCom: "lagbug",
         categorie: category,
@@ -938,7 +938,7 @@ keith(
 );
 
 //trollybug
-keith(
+zokou(
     {
         nomCom: "trollybug",
         categorie: category,
