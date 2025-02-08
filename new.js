@@ -1120,7 +1120,7 @@ if (texte && texte.startsWith('>')) {
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'BELTAH-MD',
+                pack: 'GAGA-MD',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -1192,7 +1192,7 @@ if (texte && texte.startsWith('>')) {
 
       //execution des commandes   
       if (verifCom) {
-        const cd = evt.cm.find(keith => keith.nomCom === com || keith.nomCom === com || keith.aliases && keith.aliases.includes(com));
+        const cd = evt.cm.find(zokou => zokou.nomCom === com || zokou.nomCom === com || zokou.aliases && zokou.aliases.includes(com));
         if (cd) {
           try {
             if (conf.MODE.toLocaleLowerCase() != 'yes' && !superUser) {
@@ -1202,7 +1202,7 @@ if (texte && texte.startsWith('>')) {
             /******************* PM_PERMT***************/
 
             if (!superUser && origineMessage === auteurMessage && conf.PM_PERMIT === "yes") {
-              repondre("ᴇʀʀᴏʀ🚫!! ʏᴏᴜ ʜᴀᴠᴇ ɴᴏ ᴀᴄᴄᴇss ᴏғ ʙᴇʟᴛᴀʜ-ᴍᴅ ɪɴ ᴘᴍ.");
+              repondre("ʏᴏᴏ ʙʀᴏ ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ʜᴇʀᴇ 🤣🤣  idiot😡");
               return;
             }
             ///////////////////////////////
@@ -1264,7 +1264,7 @@ if (texte && texte.startsWith('>')) {
       try {
         const metadata = await zk.groupMetadata(group.id);
         if (group.action == 'add' && (await recupevents(group.id, "welcome")) == 'on') {
-          let msg = `𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃\n\n👋 Hello
+          let msg = `🥷ɢᴀɢᴀ ᴍᴅ ʙᴏᴛ🥷\n\n👋 Hello
 `;
           let membres = group.participants;
           for (let membre of membres) {
@@ -1451,18 +1451,13 @@ const getGreeting = () => {
           await zk.sendMessage(zk.user.id, {
             text: `*Hello👋, ${getGreeting()},*
 ╭════⊷
-║ *『${conf.BOT} 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞』*
+║ *『🥷ɢᴀɢᴀ ᴍᴅ ʙᴏᴛ ɪs ᴀᴄᴛɪᴠᴇ 🥷』*
 ║    Owner : ${conf.OWNER_NAME}
 ║    Prefix : [  ${prefixe} ]
 ║    Mode : ${md} mode
 ║    Total Commands : ${evt.cm.length}
 ╰═════════════════⊷
-
-╭───◇
-┃
-┃ *Thank you for choosing*                      
-┃  ${conf.BOT}
-> Regards Beltah Tech 
+> ʀᴇɢᴀʀᴅs ᴛᴏ ʀɪᴄʜ-ɢᴀɢᴀ-ᴍɪᴅᴜsʜ 
 ╰═════════════════⊷ `
           });
         }
