@@ -82,7 +82,7 @@ zokou({
             title: "𝗡𝗝𝗔𝗕𝗨𝗟𝗢 𝗝𝗕" ,
             body: "Tap her to follow our channel",
             mediaType: 1,
-            sourceUrl:"https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
+            sourceUrl:"https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F",
             thumbnailUrl: firstVideo.thumbnail,
             renderLargerThumbnail: false,
             showAdAttribution: true,
