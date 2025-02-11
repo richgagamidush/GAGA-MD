@@ -778,7 +778,7 @@ zokou({
     { nom: "CHAT_BOT", choix: ['on', 'off'] }
   ];
 
-  let settingsMenu = "╭──────༺♡༻──────╮\n  BELTAH-XBOT Settings\n╰──────༺♡༻──────╯\n\n";
+  let settingsMenu = "╭──────༺♡༻──────╮\n  Gaga md Settings\n╰──────༺♡༻──────╯\n\n";
   settingsOptions.forEach((option, index) => {
     settingsMenu += `${index + 1}- *${option.nom}*\n`;
   });
@@ -798,7 +798,7 @@ zokou({
   });
 
   const selectedOption = settingsOptions[userChoice.message.extendedTextMessage.text - 1];
-  let settingsDetail = `╭──────༺♡༻──────╮\n  BELTAH-XBOT settings\n╰──────༺♡༻──────╯\n\n`;
+  let settingsDetail = `╭──────༺♡༻──────╮\n  Gaga md settings\n╰──────༺♡༻──────╯\n\n`;
   settingsDetail += `*Variable Name* : ${selectedOption.nom}\n`;
   settingsDetail += `*Description* : ${getDescriptionFromEnv(selectedOption.nom)}\n\n`;
   settingsDetail += "┌────── ⋆⋅☆⋅⋆ ──────┐\n\n";
