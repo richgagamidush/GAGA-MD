@@ -1,10 +1,10 @@
 
-const { keith } = require('../keizzah/keith');
+const { zokou } = require('../framework/zokou');
 const axios = require('axios');
 const wiki = require('wikipedia');
 const conf = require(__dirname + "/../set");
 
-keith({
+zokou({
   nomCom: "technews",
   reaction: '📰',
   categorie: 'search'
@@ -21,10 +21,10 @@ keith({
       text: news,
       contextInfo: {
         externalAdReply: {
-          title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 TECH NEWS",
+          title: "ɢᴀɢᴀ ᴍᴅ ᴛᴇᴄʜ ɴᴇᴡs",
           body: "keep Exploring The internet", 
           thumbnailUrl: thumbnail, 
-          sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F', 
+          sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F', 
           mediaType: 1,
           showAdAttribution: true, 
         },
@@ -38,9 +38,9 @@ keith({
 });
 
 
-keith({
+zokou({
   nomCom: "bible",
-  reaction: '🎎',
+  reaction: '🧮',
   categorie: "search"
 }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
@@ -53,7 +53,7 @@ keith({
           title: "Bible Reference Required",
           body: "Please provide a book, chapter, and verse.",
           thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg", // Replace with a suitable thumbnail URL
-          sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F',
+          sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F',
           mediaType: 1,
           showAdAttribution: true,
         },
@@ -81,17 +81,17 @@ keith({
     
     const data = response.data;
     const messageText = `
-ᬑ *𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 HOLY SCRIPT* ᬒ
+ᬑ *ɢᴀɢᴀ ᴍᴅ ᴛʜᴇ ʜᴏʟʏ ʙɪʙʟᴇ* ᬒ
 
-⧭ *_WE'RE READING:_* ${data.reference}
+🧮 *_WE'RE READING:_* ${data.reference}
 
-⧭ *_NUMBER OF VERSES:_* ${data.verses.length}
+🧮 *_NUMBER OF VERSES:_* ${data.verses.length}
 
-⧭ *_NOW READ:_* ${data.text}
+🧮 *_NOW READ:_* ${data.text}
 
-⧭ *_LANGUAGE:_* ${data.translation_name}
+🧮 *_LANGUAGE:_* ${data.translation_name}
 ╭────────────────◆
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ
+> ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ɢᴀɢᴀ ᴍᴅ
 ╰─────────────────◆ `;
     
     await zk.sendMessage(dest, {
@@ -172,8 +172,8 @@ keith({
   }
 });
 
-keith({
-  nomCom: "pair",
+zokou({
+  nomCom: "code",
   aliases: ["session", "code", "paircode", "qrcode"],
   reaction: '🖇️',
   categorie: 'system'
@@ -181,18 +181,18 @@ keith({
   const { repondre, arg, ms } = commandeOptions;
 
   if (!arg || arg.length === 0) {
-    const replyText = "Example Usage: .code 2541111xxxxx.";
+    const replyText = "Example Usage: .code 254112xxxxx.";
     return repondre(replyText);
   }
 
   try {
     // Notify user that pairing is in progress
-    const replyText = "*𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 is generating your pairing code ✅...*";
+    const replyText = "*Gaga md is generating your pairing code ✅...*";
     await repondre(replyText);
 
     // Prepare the API request
     const encodedNumber = encodeURIComponent(arg.join(" "));
-    const apiUrl = `https://bel-tah-md-codes.onrender.com/code?number=${encodedNumber}`;
+    const apiUrl = `https://gaga-session-wbc6.onrender.com/code?number=${encodedNumber}`;
 
     // Fetch the pairing code from the API
     const response = await axios.get(apiUrl);
@@ -204,7 +204,7 @@ keith({
         text: pairingCode,
         contextInfo: {
           externalAdReply: {
-            title: "𝗕𝗘𝗟𝗧𝗔𝗛-𝗠𝗗 𝗦𝗘𝗦𝗦𝗜𝗢𝗡𝗦",
+            title: "ɢᴀɢᴀ ᴍᴅ ᴄᴏᴅᴇs",
             body: "Here is your pairing code:",
             mediaType: 1,
             thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg", 
