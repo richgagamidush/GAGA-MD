@@ -23,7 +23,7 @@ zokou({
         externalAdReply: {
           title: "ɢᴀɢᴀ ᴍᴅ ᴛᴇᴄʜ ɴᴇᴡs",
           body: "keep Exploring The internet", 
-          thumbnailUrl: thumbnail, 
+          thumbnailUrl: 'https://files.catbox.moe/n3b0gm.jpg', 
           sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F', 
           mediaType: 1,
           showAdAttribution: true, 
@@ -52,7 +52,7 @@ zokou({
         externalAdReply: {
           title: "Bible Reference Required",
           body: "Please provide a book, chapter, and verse.",
-          thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg", // Replace with a suitable thumbnail URL
+          thumbnailUrl: "https://files.catbox.moe/n3b0gm.jpg", // Replace with a suitable thumbnail URL
           sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F',
           mediaType: 1,
           showAdAttribution: true,
@@ -70,8 +70,8 @@ zokou({
           externalAdReply: {
             title: "Invalid Bible Reference",
             body: "ʙᴇʟᴛᴀʜ ᴍᴅ needs a valid book, chapter, and verse.",
-            thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg", // Replace with a suitable thumbnail URL
-            sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F',
+            thumbnailUrl: "https://files.catbox.moe/n3b0gm.jpg", // Replace with a suitable thumbnail URL
+            sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F',
             mediaType: 1,
             showAdAttribution: true,
           },
@@ -98,11 +98,11 @@ zokou({
       text: messageText,
       contextInfo: {
         externalAdReply: {
-          title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 HOLY BIBLE",
+          title: "",
           body: `We're reading: ${data.reference}`,
           mediaType: 1,
-          thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg", 
-          sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F' ,
+          thumbnailUrl: "https://files.catbox.moe/n3b0gm.jpg", 
+          sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F' ,
           showAdAttribution: true, 
         },
       },
@@ -125,8 +125,8 @@ zokou({
   }
 });
 
-keith({
-  nomCom: "define",
+zokou({
+  nomCom: "define2",
   aliases: ["dictionary", "dict", "def"],
   reaction: '😁',
   categorie: "Search"
@@ -135,7 +135,7 @@ keith({
   const term = arg.join(" ");
 
   if (!term) {
-    return repondre("𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 requires a term to define.");
+    return repondre("GAGA MD requires a term to define.");
   }
 
   try {
@@ -153,11 +153,11 @@ keith({
         text: definitionMessage,
         contextInfo: {
           externalAdReply: {
-            title: "𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 DICTIONARY",
+            title: "GAGA MD DICTIONARY",
             body: `Definition of ${term}`,
             mediaType: 1,
-            thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg", 
-            sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F', 
+            thumbnailUrl: "https://files.catbox.moe/n3b0gm.jpg", 
+            sourceUrl: 'https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F', 
             showAdAttribution: true, 
           },
         },
@@ -207,7 +207,7 @@ zokou({
             title: "ɢᴀɢᴀ ᴍᴅ ᴄᴏᴅᴇs",
             body: "Here is your pairing code:",
             mediaType: 1,
-            thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg", 
+            thumbnailUrl: "https://files.catbox.moe/n3b0gm.jpg", 
             sourceUrl:  'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F',
             showAdAttribution: true, 
           },
