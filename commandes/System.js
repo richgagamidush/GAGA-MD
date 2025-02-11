@@ -129,7 +129,7 @@ zokou({
 
 // Command to retrieve Heroku config vars
 zokou({
-  nomCom: 'allvar',
+  nomCom: 'getallvar',
   categorie: "system"
 }, async (chatId, zk, context) => {
   const { repondre, superUser } = context;
@@ -172,7 +172,7 @@ zokou({
 
 // Command to set a Heroku config var
 zokou({
-  nomCom: 'setvar',
+  nomCom: 'setallvar',
   categorie: "system"
 }, async (chatId, zk, context) => {
   const { repondre, superUser, arg } = context;
