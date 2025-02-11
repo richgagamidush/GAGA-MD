@@ -1,6 +1,6 @@
 // Define the command with aliases for video
 zokou({
-  nomCom: "video1",
+  nomCom: "video",
   aliases: ["videodoc", "film", "mp4"],
   categorie: "Search",
   reaction: "💬"
@@ -64,7 +64,7 @@ zokou({
 
     // Prepare the message with song details
     const messagePayload = {
-      caption: `\n*𝗡𝗝𝗔𝗕𝗨𝗟𝗢 𝗝𝗕 𝗦𝗢𝗡𝗚𝗦*\n
+      caption: `\n*ɢᴀɢᴀ ᴍᴅ ᴠɪᴅᴇᴏ 📷 ᴘʟᴀʏᴇʀ*\n
 ╭━━━━━━━━━━━━━━━━━⊷
 ┃ *Title:* ${songTitle} 
 ┃ *Quality:* High
@@ -79,7 +79,7 @@ zokou({
         mimetype: 'audio/mpeg',
         contextInfo: {
           externalAdReply: {
-            title: "𝗡𝗝𝗔𝗕𝗨𝗟𝗢 𝗝𝗕" ,
+            title: "ɢᴀɢᴀ ᴍᴅ ᴠɪᴅᴇᴏ 📷 ᴘʟᴀʏᴇʀ" ,
             body: "Tap her to follow our channel",
             mediaType: 1,
             sourceUrl:"https://whatsapp.com/channel/0029VasnifMFi8xW4Mqysn2F",
